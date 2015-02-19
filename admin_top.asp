@@ -1,4 +1,3 @@
-<div class="outerborder">
 <table border="0" cellpadding="2" style="width:<%=TableWidth%>px; border-collapse:collapse;">
 	<tr class="title">
 		<td>
@@ -18,4 +17,3 @@
 		</td>
 	</tr>
 </table>
-</div>

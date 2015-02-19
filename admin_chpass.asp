@@ -5,6 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 	<title><%=HomeName%> 留言本 修改管理员密码</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<!-- #include file="style.asp" -->
 
 	<script type="text/javascript">

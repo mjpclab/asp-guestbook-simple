@@ -14,6 +14,7 @@ end if
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 	<title><%=HomeName%> 留言本 回复留言</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<!-- #include file="style.asp" -->
 
 	<script type="text/javascript">
@@ -33,6 +34,7 @@ end if
 </head>
 
 <body onload="sfocus()">
+<div class="outerborder">
 <!-- #include file="admin_verify.asp" -->
 <!-- #include file="admin_top.asp" -->
 
@@ -54,7 +56,6 @@ cn.close
 %>
 
 
-<div class="outerborder">
 	<table border="1" cellpadding="2" class="onetopic">
 		<tr class="title">
 			<td class="title"></td>
@@ -88,8 +89,8 @@ cn.Close
 set rs=nothing
 set cn=nothing	
 %>
-</div>
 
 <!-- #include file="bottom.asp" -->
+</div>
 </body>
 </html>

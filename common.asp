@@ -77,6 +77,7 @@ sub MessagePage(strMessage,backPage)
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 		<title><%=HomeName%> 留言本</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<!-- #include file="style.asp" -->
 	</head>
 	<body>

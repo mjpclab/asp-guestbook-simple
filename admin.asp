@@ -7,10 +7,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 	<title><%=HomeName%> 留言本 管理</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<!-- #include file="style.asp" -->
 </head>
 
 <body>
+<div class="outerborder">
 <!-- #include file="admin_top.asp" -->
 
 <%
@@ -24,7 +26,6 @@ Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
-<div class="outerborder">
 <form method="post" action="mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
 	<input type="submit" value="删除选定留言" style="margin-top:20px;" />
 <%while rs.EOF=false and Response.IsClientConnected%>
@@ -68,7 +69,6 @@ wend
 	</tr>
 </table>
 
-</div>
 
 <%
 rs.Close
@@ -78,5 +78,6 @@ set cn=nothing
 %>
 
 <!-- #include file="bottom.asp" -->
+</div>
 </body>
 </html>

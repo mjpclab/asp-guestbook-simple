@@ -6,10 +6,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
 	<title><%=HomeName%> 留言本</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<!-- #include file="style.asp" -->
 </head>
 
 <body>
+<div class="outerborder">
+
 <!-- #include file="top.asp" -->
 
 <%
@@ -22,7 +25,6 @@ CreateConn cn,dbtype
 Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
-<div class="outerborder">
 
 <%while rs.EOF=false and Response.IsClientConnected%>
 <!-- #include file="listword.asp" -->
@@ -52,7 +54,6 @@ wend
 	</tr>
 </table>
 
-</div>
 <%
 rs.Close
 cn.Close
@@ -61,5 +62,6 @@ set cn=nothing
 %>
 
 <!-- #include file="bottom.asp" -->
+</div>
 </body>
 </html>

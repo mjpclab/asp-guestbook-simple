@@ -11,7 +11,6 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 </script>
 
 
-<div class="outerborder">
 <table border="0" cellpadding="2" style="width:<%=TableWidth%>px; border-collapse:collapse;">
 	<tr class="title">
 		<td>
@@ -31,9 +30,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		</td>
 	</tr>
 </table>
-</div>
 
-<div class="outerborder">
 <table border="1" cellpadding="2" class="onetopic" style="margin-top:0px;">
 	<tr class="title">
 		<td class="title" style="text-align:right; padding-right:30px;">ª∂”≠ƒ˙¡Ù—‘£°</td>
@@ -76,4 +73,3 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		</td>
 	</tr>
 </table>
-</div>

@@ -1,0 +1,115 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	line-height: 1.5;
+}
+
+body, input, textarea {
+	font-family: SimSun, sans-serif;
+	font-size: 12px;
+}
+
+input, textarea {
+	margin:0;
+	padding:2px;
+	border: solid 1px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+input[type=submit],
+input[type=reset] {
+	padding:0.25em 1em;
+}
+
+a{
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.outerborder {
+	padding: 0;
+	margin: 0 auto;
+}
+
+table.onetopic {
+	margin-top: 20px;
+	border: solid 1px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+table.reply {
+	border: dashed 1px;
+	margin: 20px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+tr.title {
+	height: 25px;
+}
+
+td.title {
+	text-align: left;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: solid 1px;
+	background-image: url(image/bar_blue.gif);
+}
+
+td.noborder {
+	border: 0 none;
+}
+
+td.centertitle {
+	text-align: center;
+	font-weight: bold;
+}
+
+td.content {
+	text-align: left;
+	overflow: hidden;
+	border: solid 1px;
+	padding: 5px;
+	vertical-align: top;
+}
+
+div.icons {
+	width: 100%;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+}
+
+td.status {
+	text-align: left;
+	height: 25px;
+}
+
+td.status {
+	text-align: left;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: solid 1px;
+	background-image: url(image/bar_blue2.gif);
+}
+
+.bottom {
+	text-align: center;
+}
+
+.bottom,
+.bottom a:link,
+.bottom a:visited,
+.bottom a:active
+{
+	color: #888;
+}
+.bottom a:hover {
+	color:#000;
+}
