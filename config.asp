@@ -2,15 +2,6 @@
 <%
 Session.CodePage=936
 Response.Buffer=True
-if InStr(Request.ServerVariables("HTTP_ACCEPT"),"text/xml")>0 then
-	Response.ContentType="text/xml"
-elseif IsEmpty(Request.ServerVariables("HTTP_ACCEPT")) then
-	Response.ContentType="text/xml"
-elseif Trim(Request.ServerVariables("HTTP_ACCEPT"))="" then
-	Response.ContentType="text/xml"
-else
-	Response.ContentType="text/html"
-end if
 Response.CharSet="gb2312"
 
 Const dbtype=2
@@ -20,14 +11,13 @@ Const HomeName="MyHomePage"			'网站名称
 Const HomeAddr="http://"	'网站地址
 Const VCodeCount=4			'验证码长度
 
-Const HTMLSupport="False"			'是否支持HTML True:是 False:否
-Const AdminHTMLSupport="True"		'管理员回复是否支持HTML
-Const AdminTimeOut="20"		'管理员登录超时(分)
+Const HTMLSupport=False			'是否支持HTML True:是 False:否
+Const AdminHTMLSupport=True		'管理员回复是否支持HTML
+Const AdminTimeOut=20		'管理员登录超时(分)
 
-Const ItemsPerPage="5"		'每页显示的留言数
+Const ItemsPerPage=5		'每页显示的留言数
 
-Const TableWidth="500"		'表格宽度
-Const TableAlign="center"		'表格对齐方式 left:左对齐 center:居中 right:右对齐
+Const TableWidth=500		'表格宽度
 
 Const PageBackColor="#FFFFFF"		'背景色
 Const PageBackImage="image/bg.jpg"			'背景图片，使用相对路径
