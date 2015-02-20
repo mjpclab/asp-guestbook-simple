@@ -18,18 +18,16 @@ end if
 	<!-- #include file="style.asp" -->
 
 	<script type="text/javascript">
-	//<![CDATA[
 		function submitcheck(cobject)
 		{
-			if (cobject.rcontent.value=='') {alert('请输入回复内容！'); cobject.rcontent.focus(); return false;}
+			if (cobject.rcontent.value==='') {alert('请输入回复内容！'); cobject.rcontent.focus(); return false;}
 			return (true);
 		}
 		function sfocus()
 		{
 			var e=document.getElementById('rcontent');
-			if(e && e.value=='') e.focus();
+			if(e && e.value==='') e.focus();
 		}
-	//]]>
 	</script>
 </head>
 
@@ -60,7 +58,7 @@ cn.close
 	<form class="content" method="post" action="save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
 		<div class="field">
 			<span class="value">
-				<textarea class="textarea" name="rcontent" id="rcontent"><%=c_old%></textarea>
+				<textarea class="textarea" name="rcontent" id="rcontent" autofocus="autofocus"><%=c_old%></textarea>
 			</span>
 		</div>
 		<div class="command">

@@ -11,12 +11,12 @@
 	<script type="text/javascript">
 		function checkpass(cobject)
 		{
-			if (cobject.ioldpass.value=="") {alert("请输入原密码！"); cobject.ioldpass.focus(); return(false);}
-			if (cobject.inewpass1.value=="") {alert("请输入新密码！"); cobject.inewpass1.focus(); return(false);}
-			if (cobject.inewpass2.value=="") {alert("请输入确认密码！"); cobject.inewpass2.focus(); return(false);}
-			if (cobject.inewpass1.value!=cobject.inewpass2.value) {alert("新密码与确认密码不同，请重新输入！"); cobject.inewpass1.focus(); return(false);}
+			if (cobject.ioldpass.value==="") {alert("请输入原密码！"); cobject.ioldpass.focus(); return false;}
+			if (cobject.inewpass1.value==="") {alert("请输入新密码！"); cobject.inewpass1.focus(); return false;}
+			if (cobject.inewpass2.value==="") {alert("请输入确认密码！"); cobject.inewpass2.focus(); return false;}
+			if (cobject.inewpass1.value!==cobject.inewpass2.value) {alert("新密码与确认密码不同，请重新输入！"); cobject.inewpass1.focus(); return false;}
 			
-			return (true);
+			return true;
 		}
 	</script>
 </head>
@@ -29,7 +29,7 @@
 	<form class="content" method="post" action="admin_savepass.asp" onsubmit="return checkpass(this)" name="form4">
 		<div class="field">
 			<span class="label">原密码：</span>
-			<span class="value"><input type="password" name="ioldpass" id="ioldpass" maxlength="16" /></span>
+			<span class="value"><input type="password" name="ioldpass" id="ioldpass" maxlength="16" autofocus="autofocus" /></span>
 		</div>
 		<div class="field">
 			<span class="label">新密码：</span>

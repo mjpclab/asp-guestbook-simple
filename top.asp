@@ -4,9 +4,9 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 <script type="text/javascript">
 	function submitcheck(cobject)
 	{
-		if (cobject.iname.value=="") {alert("请输入姓名。"); cobject.iname.focus(); return (false);}
-		if (cobject.ititle.value=="") {alert("请输入标题。"); cobject.ititle.focus(); return (false);}
-		return (true);
+		if (cobject.iname.value==="") {alert("请输入姓名。"); cobject.iname.focus(); return false;}
+		if (cobject.ititle.value==="") {alert("请输入标题。"); cobject.ititle.focus(); return false;}
+		return true;
 	}
 </script>
 

@@ -17,7 +17,7 @@
 		<form class="content" method="post" action="login_verify.asp" id="form5" onsubmit="this.submit1.disabled=true;">
 			<div class="field">
 				<span class="label">УмТыЃК</span>
-				<span class="value"><input class="password" type="password" name="iadminpass" id="iadminpass" maxlength="16" /></span>
+				<span class="value"><input class="password" type="password" name="iadminpass" id="iadminpass" maxlength="16" autofocus="autofocus" /></span>
 			</div>
 			<div class="field">
 				<span class="label">бщжЄЃК</span>
