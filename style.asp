@@ -1,19 +1,42 @@
 <style type="text/css">
-body		{background-color:<%=PageBackColor%>; background-image:url(<%=PageBackImage%>);}
-input,textarea	{border-color:<%=TableBorderColor%>;}
+body {
+	background-color:<%=PageBackColor%>;
+	background-image:url(<%=PageBackImage%>);
+}
 
-a:link		{color:<%=LinkNormal%>;}
-a:visited	{color:<%=LinkVisited%>;}
-a:active	{color:<%=LinkActive%>;}
-a:hover		{color:<%=LinkHover%>;}
+input,textarea {
+	border-color:<%=TableBorderColor%>;
+}
 
-div.outerborder {width:<%=TableWidth%>px;}
+a:link {color:<%=LinkNormal%>;}
+a:visited {color:<%=LinkVisited%>;}
+a:active {color:<%=LinkActive%>;}
+a:hover {color:<%=LinkHover%>;}
 
-table.onetopic{width:<%=TableWidth%>px; border-color:<%=TableBorderColor%>;}
-table.reply	{width:<%=TableWidth-50%>px; border-color:<%=TableBorderColor%>;}
+.outerborder {width:<%=TableWidth%>px;}
 
-td.title	{color:<%=TableTitleColor%>; border-color:<%=TableBorderColor%>; background-color:<%=TableTitleBGC%>;}
+.topic {
+	border-color:<%=TableBorderColor%>;
+}
 
-td.content	{ color:<%=TableContentColor%>; border-color:<%=TableBorderColor%>; background-color:<%=TableContentBGC%>;}
-td.status	{ color:<%=TableInfoColor%>; border-color:<%=TableBorderColor%>; background-color:<%=TableInfoBGC%>;}
+.topic .title {
+	border-color:<%=TableBorderColor%>;
+	color:<%=TableTitleColor%>;
+	background-color:<%=TableTitleBGC%>;
+}
+
+.topic .content {
+	color:<%=TableContentColor%>;
+	background-color:<%=TableContentBGC%>;
+}
+
+.topic .reply {
+	border-color:<%=TableBorderColor%>;
+}
+
+.topic .status {
+	border-color:<%=TableBorderColor%>;
+	color:<%=TableInfoColor%>;
+	background-color:<%=TableInfoBGC%>;
+}
 </style>

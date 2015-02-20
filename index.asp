@@ -33,26 +33,7 @@ rs.MoveNext
 wend
 %>
 
-<table border="1" cellpadding="2" class="onetopic">
-	<tr class="title">
-		<td class="title centertitle">
-			[¡Ù—‘∑÷“≥]
-		</td>
-	</tr>
-	<tr>
-		<td class="content">
-		<%
-		for j=1 to PagesCount
-			if j=ipage then
-				Response.Write "<span style=""color:#FF0000"">[" &cstr(j)&"] </span>"
-			else
-				Response.Write "<a href=""index.asp?page=" & cstr(j) & """>[" &cstr(j)&"]</a> "
-			end if
-		next
-		%>
-		</td>
-	</tr>
-</table>
+<!-- #include file="listpagenum.asp" -->
 
 <%
 rs.Close

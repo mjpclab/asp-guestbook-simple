@@ -55,24 +55,21 @@ rs.Close
 cn.close
 %>
 
-
-	<table border="1" cellpadding="2" class="onetopic">
-		<tr class="title">
-			<td class="title"></td>
-		</tr>
-		<tr>
-			<td class="content" style="text-align:center;">
-				<br/>
-				<form method="post" action="save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
-					回复内容<br/>
-					<textarea rows="5" name="rcontent" id="rcontent" cols="50"><%=c_old%></textarea><br/><br/>
-					<input type="hidden" name="page" id="page" value="<%=Server.HTMLEncode(Request.QueryString("page"))%>" />
-					<input type="hidden" name="mainid" id="mainid" value="<%=Server.HTMLEncode(Request.QueryString("id"))%>" />
-					<input type="submit" value="发表回复" />
-				</form>
-			</td>
-		</tr>
-	</table>
+<div class="topic reply">
+	<h2 class="title">回复留言</h2>
+	<form class="content" method="post" action="save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
+		<div class="field">
+			<span class="value">
+				<textarea class="textarea" name="rcontent" id="rcontent"><%=c_old%></textarea>
+			</span>
+		</div>
+		<div class="command">
+			<input type="hidden" name="page" id="page" value="<%=Server.HTMLEncode(Request.QueryString("page"))%>" />
+			<input type="hidden" name="mainid" id="mainid" value="<%=Server.HTMLEncode(Request.QueryString("id"))%>" />
+			<input type="submit" value="发表回复" />
+		</div>
+	</form>
+</div>
 
 <%
 CreateConn cn,dbtype

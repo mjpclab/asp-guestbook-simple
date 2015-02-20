@@ -28,47 +28,24 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 
 <form method="post" action="mdel.asp" onsubmit="return confirm('È·ÊµÒªÉ¾³ýÑ¡¶¨ÁôÑÔÂð£¿')">
 	<input type="submit" value="É¾³ýÑ¡¶¨ÁôÑÔ" style="margin-top:20px;" />
-<%while rs.EOF=false and Response.IsClientConnected%>
+	<%while rs.EOF=false and Response.IsClientConnected%>
 	<!-- #include file="listword.asp" -->
 	
-	<table border="0" cellpadding="2" style="width:<%=TableWidth%>px; border-collapse:collapse;">
-		<tr>
-			<td>
-			<input type="checkbox" name="id" id="id_<%=rs("id")%>" value="<%=rs("id")%>" /><label for="id_<%=rs("id")%>">(Ñ¡¶¨)</label> 
-			<a href="reply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="image/icon_reply.gif" style="border-width:0px;" />[»Ø¸´]</a> 
-			<a href="del.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ýÁôÑÔ"><img alt="" src="image/icon_del.gif" style="border-width:0px;" />[É¾³ý]</a> 
-			<% if rs("replied")=true then %><a href="delreply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ý»Ø¸´"><img alt="" src="image/icon_delreply.gif" style="border-width:0px;" />[É¾³ý»Ø¸´]</a> <% end if %>
-			</td>
-		</tr>
-	</table>
-<%
-rs.MoveNext
-wend
-%>
+	<div class="admin-tools">
+		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs("id")%>" value="<%=rs("id")%>" /><label for="id_<%=rs("id")%>">(Ñ¡¶¨)</label></span>
+		<a class="tool" href="reply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="image/icon_reply.gif" />[»Ø¸´]</a>
+		<a class="tool" href="del.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ýÁôÑÔ"><img alt="" src="image/icon_del.gif" />[É¾³ý]</a>
+		<% if rs("replied")=true then %><a class="tool" href="delreply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ý»Ø¸´"><img alt="" src="image/icon_delreply.gif" />[É¾³ý»Ø¸´]</a> <% end if %>
+	</div>
+	<%
+	rs.MoveNext
+	wend
+	%>
+
 	<input type="submit" value="É¾³ýÑ¡¶¨ÁôÑÔ" style="margin-top:20px;" />
 </form>
 
-<table border="1" cellpadding="2" class="onetopic">
-	<tr class="title">
-		<td class="title centertitle">
-			[ÁôÑÔ·ÖÒ³]
-		</td>
-	</tr>
-	<tr>
-		<td class="content">
-		<%
-		for j=1 to PagesCount
-			if j=ipage then
-				Response.Write "<span style=""color:#FF0000"">[" &cstr(j)&"] </span>"
-			else
-				Response.Write "<a href=""admin.asp?page=" & cstr(j) & """>[" &cstr(j)&"]</a> "
-			end if
-		next
-		%>
-		</td>
-	</tr>
-</table>
-
+<!-- #include file="listpagenum.asp" -->
 
 <%
 rs.Close
