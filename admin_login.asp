@@ -21,7 +21,7 @@
 			</div>
 			<div class="field">
 				<span class="label">验证：</span>
-				<span class="value"><input class="text captcha" type="text" name="ivcode" id="ivcode" /><img class="captcha" src="show_vcode.asp" /></span>
+				<span class="value"><input class="text captcha" type="text" name="ivcode" id="ivcode" autocomplete="off" /><img class="captcha" src="show_vcode.asp" /></span>
 			</div>
 			<div class="command">
 				<input type="submit" id="submit1" value="确定" />

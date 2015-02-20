@@ -77,7 +77,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 					<span class="text">—È÷§</span>
 				</span>
 				<span class="value">
-					<input class="text" type="text" name="ivcode" /><img class="captcha" src="show_vcode.asp" />
+					<input class="text" type="text" name="ivcode" autocomplete="off" /><img class="captcha" src="show_vcode.asp" />
 				</span>
 			</div>
 			<div class="field">
