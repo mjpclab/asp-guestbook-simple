@@ -26,7 +26,7 @@ Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
-<%while rs.EOF=false and Response.IsClientConnected%>
+<%while rs.EOF=false%>
 <!-- #include file="listword.asp" -->
 <%
 rs.MoveNext
