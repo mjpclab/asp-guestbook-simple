@@ -2,7 +2,7 @@
 <%
 Session.CodePage=936
 Response.Buffer=True
-Response.CharSet="gb2312"
+Response.CharSet="gbk"
 
 Const dbtype=2
 Const dbfile="database/data.asp"		'数据库文件位置，使用相对路径，请自行更改
