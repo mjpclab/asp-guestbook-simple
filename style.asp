@@ -13,7 +13,12 @@ a:visited {color:<%=LinkVisited%>;}
 a:active {color:<%=LinkActive%>;}
 a:hover {color:<%=LinkHover%>;}
 
-.outerborder {width:<%=TableWidth%>px;}
+.outerborder {
+	max-width:<%=TableWidth%>px;
+}
+*html .outerborder {
+	width:<%=TableWidth%>px;
+}
 
 .topic {
 	border-color:<%=TableBorderColor%>;

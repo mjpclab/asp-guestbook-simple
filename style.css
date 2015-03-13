@@ -230,10 +230,6 @@ form .command {
 	width: 30px;
 }
 
-.write-words .command {
-	width: 430px;
-}
-
 .write-words input.text {
 	width: 110px;
 }
