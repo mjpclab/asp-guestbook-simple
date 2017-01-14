@@ -18,9 +18,9 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 rs.Open "SELECT * FROM supervisor",cn,0,1,1
 
-session.Contents("adminpass")=md5(request("iadminpass"),16)
+Session("adminpass")=md5(request("iadminpass"),16)
 if rs.EOF=false then
-	if session.Contents("adminpass")=rs(0) then
+	if Session("adminpass")=rs(0) then
 		session.Timeout=clng(AdminTimeOut)
 		Response.Redirect "admin.asp"
 	else

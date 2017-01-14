@@ -13,7 +13,7 @@ rs.Open "SELECT adminpass FROM supervisor",cn,1,3,1
 if rs.EOF=false then
 	if md5(Request.Form("ioldpass"),16)=rs(0) then
 		pwd=md5(request("inewpass1"),16)
-		session.Contents("adminpass")=pwd
+		Session("adminpass")=pwd
 		rs(0)=pwd
 		rs.Update
 
