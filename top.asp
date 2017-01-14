@@ -16,9 +16,9 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 	if HomeLogo<>"" then Response.Write "<img src=""" &HomeLogo& """ alt="""" style=""border:0px;"" />"
 	if HomeName<>"" then
 		if HomeAddr<>"" then
-			Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &gt;&gt; ¡Ù—‘±æ"
+			Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &raquo; ¡Ù—‘±æ"
 		else
-			Response.Write HomeName& " &gt;&gt; ¡Ù—‘±æ"
+			Response.Write HomeName& " &raquo; ¡Ù—‘±æ"
 		end if
 	end if
 	%>

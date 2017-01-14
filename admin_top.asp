@@ -4,9 +4,9 @@
 	    if HomeLogo<>"" then Response.Write "<img src=""" &HomeLogo& """ alt="""" style=""border:0px;"" />"
 		if HomeName<>"" then
 			if HomeAddr<>"" then
-				Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &gt;&gt; "
+				Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &raquo; "
 			else
-				Response.Write HomeName& " &gt;&gt; "
+				Response.Write HomeName& " &raquo; "
 			end if
 		end if
 		Response.Write "<a href=""admin.asp?page=" & Request.QueryString("page") & """>¡Ù—‘±æ</a>"
