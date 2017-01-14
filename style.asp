@@ -44,4 +44,11 @@ a:hover {color:<%=LinkHover%>;}
 	color:<%=TableInfoColor%>;
 	background-color:<%=TableInfoBGC%>;
 }
+
+.topic .page-num {
+	border-color:<%=TableContentBGC%>;
+}
+.topic a.page-num:hover {
+	border-color:<%=TableBorderColor%>;
+}
 </style>

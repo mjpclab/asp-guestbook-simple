@@ -4,9 +4,9 @@
 	<%
 	for j=1 to PagesCount
 		if j=ipage then
-			Response.Write "<span class=""page-num"">[" &cstr(j)&"]</span>"
+			Response.Write "<span class=""page-num"">" & cstr(j) & "</span>"
 		else
-			Response.Write "<a class=""page-num"" href=""index.asp?page=" & cstr(j) & """>[" &cstr(j)&"]</a>"
+			Response.Write "<a class=""page-num"" href=""index.asp?page=" & cstr(j) & """>" & cstr(j) &"</a>"
 		end if
 	next
 	%>

@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	color: #000000;
+	color: #000;
 	line-height: 1.5;
 }
 
@@ -131,7 +131,7 @@ form .command {
 	font-size: 12px;
 	font-weight: normal;
 	margin: 0;
-	padding: 0 3px;
+	padding: 0 5px;
 	height: 25px;
 	line-height: 25px;
 	border-bottom: 1px solid;
@@ -192,7 +192,12 @@ form .command {
 }
 
 .topic .page-num {
-	margin-right: 0.5em;
+	display: inline-block;
+	padding: 0.15em 0.5em;
+	border: 1px solid;
+}
+.topic .page-num:hover {
+	text-decoration: none;
 }
 
 .topic span.page-num {
