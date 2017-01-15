@@ -21,7 +21,7 @@ ids=Replace(ids,"<","")
 
 if ids<>"" then
 	set cn=server.CreateObject("ADODB.Connection")
-	CreateConn cn,dbtype
+	CreateConn cn
 
 	if Not IsEmpty(Request.Form("multi_del")) then
 		cn.Execute "DELETE FROM reply WHERE articleid IN(" & ids & ")",,1

@@ -10,7 +10,7 @@ if Not isnumeric(Request.QueryString("id")) then
 end if
 
 set cn=server.CreateObject("ADODB.Connection")
-CreateConn cn,dbtype
+CreateConn cn
 
 cn.Execute "DELETE FROM reply WHERE articleid=" & Request.QueryString("id"),,1
 cn.Execute "DELETE FROM main WHERE id=" & Request.QueryString("id"),,1

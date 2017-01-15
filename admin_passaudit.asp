@@ -10,7 +10,7 @@ if Not isnumeric(Request.QueryString("id")) then
 end if
 
 set cn=server.CreateObject("ADODB.Connection")
-CreateConn cn,dbtype
+CreateConn cn
 
 cn.Execute "UPDATE main SET auditting=false WHERE id=" & Request.QueryString("id"),,1
 

@@ -16,7 +16,7 @@ Dim cn,rs
 set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 
-CreateConn cn,dbtype
+CreateConn cn
 rs.Open "SELECT TOP 1 * FROM supervisor",cn,0,1,1
 
 Session("adminpass")=md5(Request.Form("iadminpass"),16)

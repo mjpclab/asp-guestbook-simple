@@ -20,7 +20,7 @@ Dim cn,rs
 set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 
-CreateConn cn,dbtype
+CreateConn cn
 dim content1,name1,title1,email1,qqid1,homepage1
 '----------------------------------
 name1=server.HTMLEncode(Request.Form("iname"))

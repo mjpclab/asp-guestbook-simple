@@ -11,7 +11,7 @@ end if
 
 set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
-CreateConn cn,dbtype
+CreateConn cn
 
 if isnumeric(request.Form("mainid")) then
 	dim reinfo

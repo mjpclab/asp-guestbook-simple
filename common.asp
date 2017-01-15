@@ -1,14 +1,8 @@
 <%
 '===================
-function CreateConn(byref tconn,byval tDBType)
-	select case tDBType
-	case 1
-		tconn.ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""" & server.Mappath(dbfile) & """"
-		tconn.Open
-	case 2
-		tconn.ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""" & server.Mappath(dbfile) & """"
-		tconn.Open
-	end select
+function CreateConn(byref tconn)
+	tconn.ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""" & server.Mappath(dbfile) & """"
+	tconn.Open
 end function
 '==================================
 function getvcode(byval codelen)

@@ -8,7 +8,7 @@ response.expires=-1
 
 set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
-CreateConn cn,dbtype
+CreateConn cn
 rs.Open "SELECT adminpass FROM supervisor",cn,1,3,1
 
 if Not rs.EOF then

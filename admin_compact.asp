@@ -47,7 +47,7 @@ if dbtype=1 or dbtype=2 then
 	Set Engine = nothing
 elseif dbtype=10 then
 	set cn=Server.CreateObject("ADODB.Connection")
-	CreateConn cn,dbtype
+	CreateConn cn
 	cn.Execute sql_compact,,1
 	
 	cn.Close
