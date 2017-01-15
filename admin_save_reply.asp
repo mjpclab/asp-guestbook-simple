@@ -4,7 +4,7 @@
 
 <%
 Response.Expires=-1
-if Not isnumeric(request("mainid")) then
+if Not isnumeric(Request.Form("mainid")) then
 	Response.Redirect "index.asp"
 	Response.End 
 end if
@@ -17,12 +17,12 @@ if isnumeric(request.Form("mainid")) then
 	dim tcon
 	tcon=replace(Request.Form("rcontent"),"<%","< %")
 
-	rs.Open "SELECT TOP 1 * FROM main WHERE id=" & request("mainid"),cn,0,3,1
+	rs.Open "SELECT TOP 1 * FROM main WHERE id=" & Request.Form("mainid"),cn,0,3,1
 	if Not rs.EOF then		'ÁôÑÔ´æÔÚ
 		rs.Fields("replied")=true
 		rs.Update
 		rs.Close
-		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" &request("mainid"),cn,0,3,1
+		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" &Request.Form("mainid"),cn,0,3,1
 		if rs.EOF then	'ÐÂ»Ø¸´
 			rs.Close 
 			rs.Open "INSERT INTO reply VALUES('" &Request.Form("mainid")& "','" &tcon& "')",cn

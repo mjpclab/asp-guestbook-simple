@@ -1,9 +1,7 @@
 <%
 'Verify code bitmap display module (simplified)
-'(C) Copyright 2004-2005 MJ PC Lab
+'by MJ PC Lab
 'http://mjpclab.net/
-'If you use this code,please reserve the Copyright Declaration
-'如果你使用此代码，请保留版权声明
 
 Response.ContentType="asset/image/bmp"
 Response.Expires = -1
@@ -122,9 +120,6 @@ i_width=len(i_vcode)*alpha_width
 i_height=alpha_height
 
 
-
-'Copyright MJ PC Lab 2004-2005 [http://mjpclab.net]
-'All rights reserved (MJ PC Lab版权所有)
 '===============================================
 dim row,k,bitpos,bmpstream,curNum,header
 header=""

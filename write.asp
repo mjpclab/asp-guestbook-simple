@@ -34,9 +34,10 @@ qqid1=server.HTMLEncode(Request.Form("iqq"))
 qqid1=replace(qqid1," ","")
 
 homepage1=server.HTMLEncode(Request.Form("ihomepage"))
-homepage1=replace(replace(homepage1," ",""),"script:","script",1,-1,1)
-if lcase(left(homepage1,7))<>"http://" and lcase(left(homepage1,6))<>"ftp://" and homepage1<>"" then homepage1="http://" & homepage1
-
+homepage1=replace(homepage1,"script:","script",1,-1,1)
+if homepage1<>"" then
+	if InStr(homepage1,"//")=0 then homepage1="http://" & homepage1
+end if
 content1=replace(Request.Form("icontent"),"<%","< %")
 '-------------------------------------
 rs.Open "SELECT TOP 1 * FROM main WHERE id IS NULL",cn,0,3,1

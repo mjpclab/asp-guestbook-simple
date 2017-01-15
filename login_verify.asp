@@ -19,7 +19,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 rs.Open "SELECT TOP 1 * FROM supervisor",cn,0,1,1
 
-Session("adminpass")=md5(request("iadminpass"),16)
+Session("adminpass")=md5(Request.Form("iadminpass"),16)
 if Not rs.EOF then
 	if Session("adminpass")=rs.Fields(0) then
 		session.Timeout=clng(AdminTimeOut)
