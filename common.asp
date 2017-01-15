@@ -77,8 +77,8 @@ sub MessagePage(strMessage,backPage)
 	<head>
 		<!-- #include file="inc_metatag.asp" -->
 		<title><%=HomeName%> ÁôÑÔ±¾</title>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<!-- #include file="style.asp" -->
+		<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
+		<!-- #include file="asset/css/style.asp" -->
 	</head>
 	<body>
 		<%=strMessage%><br />

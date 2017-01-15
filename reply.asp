@@ -14,8 +14,8 @@ end if
 <head>
 	<!-- #include file="inc_metatag.asp" -->
 	<title><%=HomeName%> ¡Ù—‘±æ ªÿ∏¥¡Ù—‘</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<!-- #include file="style.asp" -->
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
+	<!-- #include file="asset/css/style.asp" -->
 
 	<script type="text/javascript">
 		function submitcheck(cobject)

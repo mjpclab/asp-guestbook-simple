@@ -5,8 +5,8 @@
 <head>
 	<!-- #include file="inc_metatag.asp" -->
 	<title><%=HomeName%> 留言本 修改管理员密码</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<!-- #include file="style.asp" -->
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
+	<!-- #include file="asset/css/style.asp" -->
 
 	<script type="text/javascript">
 		function checkpass(cobject)

@@ -7,8 +7,8 @@
 <head>
 	<!-- #include file="inc_metatag.asp" -->
 	<title><%=HomeName%> ¡Ù—‘±æ π‹¿Ì</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<!-- #include file="style.asp" -->
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
+	<!-- #include file="asset/css/style.asp" -->
 </head>
 
 <body>
