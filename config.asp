@@ -19,7 +19,7 @@ Const ItemsPerPage=5		'每页显示的留言数
 Const TableWidth=500		'表格宽度
 
 Const PageBackColor="#FFFFFF"		'背景色
-Const PageBackImage="image/bg.jpg"			'背景图片，使用相对路径
+Const PageBackImage="asset/image/bg.jpg"			'背景图片，使用相对路径
 Const TableBorderColor="#80A8FF"		'表格边框颜色
 Const TableTitleBGC="#d1e0ff"			'表格－文章标题背景色
 Const TableTitleColor="#000000"		'表格－文章标题颜色

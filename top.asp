@@ -32,7 +32,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		<div class="contact">
 			<div class="field">
 				<span class="label">
-					<img src="image/icon_name.gif" /><span class="text">姓名</span><span class="required">*</span>
+					<img src="asset/image/icon_name.gif" /><span class="text">姓名</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="iname" maxlength="64" />
@@ -40,7 +40,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="image/icon_mail.gif" /><span class="text">邮件</span>
+					<img src="asset/image/icon_mail.gif" /><span class="text">邮件</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="imail" maxlength="48" />
@@ -48,7 +48,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="image/icon_qq.gif" /><span class="text">QQ号</span>
+					<img src="asset/image/icon_qq.gif" /><span class="text">QQ号</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="iqq" maxlength="16" />
@@ -56,7 +56,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="image/icon_homepage.gif" /><span class="text">主页</span>
+					<img src="asset/image/icon_homepage.gif" /><span class="text">主页</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="ihomepage" maxlength="192" />

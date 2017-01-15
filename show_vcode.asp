@@ -5,7 +5,7 @@
 'If you use this code,please reserve the Copyright Declaration
 '如果你使用此代码，请保留版权声明
 
-Response.ContentType="image/bmp"
+Response.ContentType="asset/image/bmp"
 Response.Expires = -1
 Response.AddHeader "Pragma","no-cache"
 Response.AddHeader "cache-control","no-cache, must-revalidate"

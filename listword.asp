@@ -13,9 +13,9 @@
 		</div>
 		<div class="icons">
 		<%
-		if rs("email")<>"" then Response.Write "<a href=""mailto:" &rs("email")& """ title=""作者邮箱：" &rs("email")& """><img src=""image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
-		if rs("qqid")<>"" then Response.Write "<span title=""作者QQ：" &rs("qqid")& """><img src=""image/icon_qq.gif"" alt=""作者QQ：" &rs("qqid")& """ style=""border:0px;"" /></span>"
-		if rs("homepage")<>"" then Response.Write "<a href=""" &rs("homepage")& """ target=""_blank"" title=""作者主页：" &rs("homepage")& """><img src=""image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
+		if rs("email")<>"" then Response.Write "<a href=""mailto:" &rs("email")& """ title=""作者邮箱：" &rs("email")& """><img src=""asset/image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
+		if rs("qqid")<>"" then Response.Write "<span title=""作者QQ：" &rs("qqid")& """><img src=""asset/image/icon_qq.gif"" alt=""作者QQ：" &rs("qqid")& """ style=""border:0px;"" /></span>"
+		if rs("homepage")<>"" then Response.Write "<a href=""" &rs("homepage")& """ target=""_blank"" title=""作者主页：" &rs("homepage")& """><img src=""asset/image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
 		%>
 		</div>
 		<%if rs("replied")=true then%>
