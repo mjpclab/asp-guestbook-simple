@@ -85,7 +85,7 @@ set rs=nothing
 set cn=nothing	
 %>
 
-<!-- #include file="bottom.asp" -->
+<!-- #include file="include/template/footer.inc" -->
 </div>
 </body>
 </html>
