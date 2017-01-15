@@ -14,23 +14,22 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 
 if isnumeric(request.Form("mainid")) then
-	dim tcon
-	tcon=replace(Request.Form("rcontent"),"<%","< %")
+	dim reinfo
+	reinfo=replace(Request.Form("rcontent"),"<%","< %")
 
-	rs.Open "SELECT TOP 1 * FROM main WHERE id=" & Request.Form("mainid"),cn,0,3,1
+	rs.Open "SELECT TOP 1 1 FROM main WHERE id=" & Request.Form("mainid"),cn,0,3,1
 	if Not rs.EOF then		'留言存在
-		rs.Fields("replied")=true
+		rs.Close
+		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" & Request.Form("mainid"),cn,0,3,1
+		if rs.EOF then	'新回复
+			rs.AddNew
+			rs.Fields("articleid")=Request.Form("mainid")
+		end if
+		rs.Fields("reinfo")=reinfo
 		rs.Update
 		rs.Close
-		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" &Request.Form("mainid"),cn,0,3,1
-		if rs.EOF then	'新回复
-			rs.Close 
-			rs.Open "INSERT INTO reply VALUES('" &Request.Form("mainid")& "','" &tcon& "')",cn
-		else	'更新回复
-			rs.Fields("reinfo")=tcon
-			rs.Update
-			rs.close
-		end if
+	else
+		rs.Close
 	end if
 
 	cn.close

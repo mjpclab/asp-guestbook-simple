@@ -14,7 +14,6 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 
 cn.Execute "DELETE FROM reply WHERE articleid=" & Request.QueryString("id"),,1
-cn.Execute "UPDATE main SET replied=false WHERE id=" & Request.QueryString("id"),,1
 
 cn.Close
 set cn=nothing

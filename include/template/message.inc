@@ -1,18 +1,24 @@
+<%
+Dim article
+article=rs.Fields("article")
+if article<>"" then
+	Call convertstr(article, HTMLSupport, UBBSupport, false)
+else
+	article = "(无内容)"
+end if
+
+Dim reinfo
+reinfo=rs.Fields("reinfo")
+if reinfo<>"" then
+	Call convertstr(reinfo, AdminHTMLSupport, AdminUBBSupport, true)
+else
+	reinfo=""
+end if
+%>
 <div class="topic">
 	<h2 class="title"><%=rs.Fields("title") %></h2>
 	<div class="content">
-		<div class="words">
-		<%
-			Dim article
-			article=rs.Fields("article")
-			if article<>"" then
-				Call convertstr(article, HTMLSupport, UBBSupport, false)
-				Response.Write article
-			else
-				Response.Write "(无内容)"
-			end if
-		%>
-		</div>
+		<div class="words"><%=article%></div>
 		<div class="icons">
 		<%
 		if rs.Fields("email")<>"" then Response.Write "<a href=""mailto:" &rs.Fields("email")& """ title=""作者邮箱：" &rs.Fields("email")& """><img src=""asset/image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
@@ -20,18 +26,11 @@
 		if rs.Fields("homepage")<>"" then Response.Write "<a href=""" &rs.Fields("homepage")& """ target=""_blank"" title=""作者主页：" &rs.Fields("homepage")& """><img src=""asset/image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
 		%>
 		</div>
-		<%if rs.Fields("replied") then%>
+		<%if reinfo<>"" then%>
 		<div class="reply">
 			<h3 class="title">版主回复：</h3>
 			<div class="content">
-			<div class="words">
-			<%
-				Dim reinfo
-				reinfo=rs.Fields("reinfo")
-				Call convertstr(reinfo, AdminHTMLSupport, AdminUBBSupport, true)
-				Response.Write reinfo
-			%>
-			</div>
+			<div class="words"><%=reinfo%></div>
 		</div>
 		</div>
 		<%end if%>

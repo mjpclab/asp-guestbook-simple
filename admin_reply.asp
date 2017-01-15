@@ -42,16 +42,13 @@ set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 
 CreateConn cn,dbtype
-rs.Open "SELECT * FROM reply WHERE articleid=" &Request.QueryString("id"),cn,0,1,1
+rs.Open "SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid WHERE main.id=" &Request.QueryString("id"),cn,0,1,1
 
 if Not rs.EOF then
-	c_old=rs.Fields("reinfo")
+	reinfo_old=rs.Fields("reinfo")
 else
-	c_old=""
+	reinfo_old=""
 end if
-
-rs.Close
-cn.close
 %>
 
 <div class="topic reply">
@@ -59,7 +56,7 @@ cn.close
 	<form class="content" method="post" action="admin_save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
 		<div class="field">
 			<span class="value">
-				<textarea class="textarea" name="rcontent" id="rcontent" autofocus="autofocus"><%=c_old%></textarea>
+				<textarea class="textarea" name="rcontent" id="rcontent" autofocus="autofocus"><%=reinfo_old%></textarea>
 			</span>
 		</div>
 		<div class="command">
@@ -70,12 +67,7 @@ cn.close
 	</form>
 </div>
 
-<%
-CreateConn cn,dbtype
-rs.Open "SELECT * FROM main WHERE id=" &Request.QueryString("id"),cn,0,1,1
-	
-if Not rs.EOF then
-%>
+<%if Not rs.EOF then%>
 	<!-- #include file="include/template/message.inc" -->
 <%
 end if
@@ -83,7 +75,7 @@ end if
 rs.Close
 cn.Close
 set rs=nothing
-set cn=nothing	
+set cn=nothing
 %>
 
 <!-- #include file="include/template/footer.inc" -->
