@@ -56,7 +56,7 @@ cn.close
 
 <div class="topic reply">
 	<h2 class="title">ªÿ∏¥¡Ù—‘</h2>
-	<form class="content" method="post" action="save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
+	<form class="content" method="post" action="admin_save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
 		<div class="field">
 			<span class="value">
 				<textarea class="textarea" name="rcontent" id="rcontent" autofocus="autofocus"><%=c_old%></textarea>
