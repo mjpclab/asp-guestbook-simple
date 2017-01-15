@@ -11,10 +11,10 @@
 		end if
 
 		Dim page
-		if Not IsEmpty(Request.QueryString("page")) then
-			page=Request.QueryString("page")
-		else
+		if IsEmpty(Request.QueryString("page")) then
 			page=""
+		else
+			page=Request.QueryString("page")
 		end if
 		%>
 		 &raquo; <a href="index.asp<%if page<>"" then%>?page=<%=page%><%end if%>">¡Ù—‘±æ</a>
