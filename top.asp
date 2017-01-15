@@ -13,7 +13,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 <div class="header">
 	<h1 class="title">
 	<%
-	if HomeLogo<>"" then Response.Write "<img src=""" &HomeLogo& """ alt="""" style=""border:0px;"" />"
+	if HomeLogo<>"" then Response.Write "<img src=""" &HomeLogo& """ alt=""" & HomeName & """ />"
 	if HomeName<>"" then
 		if HomeAddr<>"" then
 			Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &raquo; 留言本"
@@ -23,7 +23,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 	end if
 	%>
 	</h1>
-	<span><a href="admin_login.asp">管理</a></span>
+	<span><a href="admin.asp">管理</a></span>
 </div>
 
 <div class="topic write-words">
