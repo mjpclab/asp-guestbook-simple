@@ -33,7 +33,7 @@ rs.MoveNext
 wend
 %>
 
-<!-- #include file="listpagenum.asp" -->
+<!-- #include file="include/template/page_number.inc" -->
 
 <%
 rs.Close

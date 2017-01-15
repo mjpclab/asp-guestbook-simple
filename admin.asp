@@ -46,7 +46,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 	<input type="submit" value="É¾³ýÑ¡¶¨ÁôÑÔ" style="margin-top:20px;" />
 </form>
 
-<!-- #include file="listpagenum.asp" -->
+<!-- #include file="include/template/page_number.inc" -->
 
 <%
 rs.Close
