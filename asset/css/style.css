@@ -137,7 +137,6 @@ form .command {
 	border-bottom: 1px solid;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	background-image: url(../image/bar_blue.gif);
 }
 
 .topic .content {
@@ -184,7 +183,6 @@ form .command {
 	white-space: nowrap;
 	padding: 0 3px;
 	border-top: 1px solid;
-	background-image: url(../image/bar_blue2.gif);
 }
 
 .topic .status .item {
