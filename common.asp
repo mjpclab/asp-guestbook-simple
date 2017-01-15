@@ -1,8 +1,13 @@
 <%
 '===================
 function CreateConn(byref tconn)
-	tconn.ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""" & server.Mappath(dbfile) & """"
-	tconn.Open
+	Dim connstr
+	connstr="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""" & server.Mappath(dbfile) & """;"
+	if dbfilepassword <> "" then
+		connstr = connstr & "Jet OLEDB:Database Password=""" & Replace(dbfilepassword,"""","""""") & """;"
+	end if
+
+	tconn.Open connstr
 end function
 '==================================
 function getvcode(byval codelen)
