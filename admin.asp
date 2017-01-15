@@ -14,7 +14,7 @@
 
 <body>
 <div class="outerborder">
-<!-- #include file="admin_top.asp" -->
+<!-- #include file="include/template/top_admin.inc" -->
 
 <%
 response.expires=-1

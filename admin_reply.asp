@@ -35,7 +35,7 @@ end if
 
 <body onload="sfocus()">
 <div class="outerborder">
-<!-- #include file="admin_top.asp" -->
+<!-- #include file="include/template/top_admin.inc" -->
 
 <%
 set cn=server.CreateObject("ADODB.Connection")

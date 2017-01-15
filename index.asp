@@ -13,7 +13,7 @@
 <body>
 <div class="outerborder">
 
-<!-- #include file="top.asp" -->
+<!-- #include file="include/template/top_guest.inc" -->
 
 <%
 response.expires=-1
