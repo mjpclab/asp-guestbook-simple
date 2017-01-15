@@ -1,5 +1,5 @@
 <!-- #include file="config.asp" -->
-<!-- #include file="md5.asp" -->
+<!-- #include file="include/utility/md5.asp" -->
 
 <%
 response.expires=-1
