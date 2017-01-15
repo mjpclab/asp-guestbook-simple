@@ -3,7 +3,7 @@
 
 <%
 Response.Expires=-1
-if isnumeric(request("mainid"))=false then
+if Not isnumeric(request("mainid")) then
 	Response.Redirect "index.asp"
 	Response.End 
 end if
@@ -14,7 +14,7 @@ CreateConn cn,dbtype
 
 if isnumeric(request.Form("mainid"))=true then
 	dim tcon
-	if cbool(AdminHtmlSupport)=true then
+	if AdminHtmlSupport then
 		tcon=request("rcontent")
 		tcon=replace(tcon,"<%","< %")
 	else
@@ -22,7 +22,7 @@ if isnumeric(request.Form("mainid"))=true then
 	end if
 	
 	rs.Open "SELECT * FROM main WHERE id=" & request("mainid"),cn,0,3,1
-	if rs.EOF=false then		'ÁôÑÔ´æÔÚ
+	if Not rs.EOF then		'ÁôÑÔ´æÔÚ
 		rs("replied")=true
 		rs.Update
 		rs.Close

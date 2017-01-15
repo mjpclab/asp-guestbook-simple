@@ -36,7 +36,7 @@ homepage1=server.HTMLEncode(Request.Form("ihomepage"))
 homepage1=replace(replace(homepage1," ",""),"script:","script",1,-1,1)
 if lcase(left(homepage1,7))<>"http://" and lcase(left(homepage1,6))<>"ftp://" and homepage1<>"" then homepage1="http://" & homepage1
 
-if CBool(HtmlSupport)=False then
+if Not HtmlSupport then
 	content1=server.HTMLEncode(Request.Form("icontent"))
 else
 	content1=Request.Form("icontent")

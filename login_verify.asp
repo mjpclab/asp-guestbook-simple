@@ -16,10 +16,10 @@ set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 
 CreateConn cn,dbtype
-rs.Open "SELECT * FROM supervisor",cn,0,1,1
+rs.Open "SELECT TOP 1 * FROM supervisor",cn,0,1,1
 
 Session("adminpass")=md5(request("iadminpass"),16)
-if rs.EOF=false then
+if Not rs.EOF then
 	if Session("adminpass")=rs(0) then
 		session.Timeout=clng(AdminTimeOut)
 		Response.Redirect "admin.asp"

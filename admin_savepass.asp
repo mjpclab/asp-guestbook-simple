@@ -10,7 +10,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 rs.Open "SELECT adminpass FROM supervisor",cn,1,3,1
 
-if rs.EOF=false then
+if Not rs.EOF then
 	if md5(Request.Form("ioldpass"),16)=rs(0) then
 		pwd=md5(request("inewpass1"),16)
 		Session("adminpass")=pwd

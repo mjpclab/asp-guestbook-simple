@@ -3,7 +3,7 @@
 
 <%
 response.expires=-1
-if isnumeric(Request.QueryString("id"))=false then
+if Not isnumeric(Request.QueryString("id")) then
 	Response.Redirect "index.asp"
 	Response.End 
 end if

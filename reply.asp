@@ -3,7 +3,7 @@
 
 <%
 Response.Expires=-1
-if isnumeric(Request.QueryString("id"))=false or Request.QueryString("id")="" then
+if Not isnumeric(Request.QueryString("id")) or Request.QueryString("id")="" then
 	Response.Redirect "admin.asp"
 	Response.End 
 end if
@@ -43,7 +43,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 rs.Open "SELECT * FROM reply WHERE articleid=" &Request.QueryString("id"),cn,0,1,1
 
-if rs.EOF=false then 
+if Not rs.EOF then
 	c_old=rs("reinfo")
 else
 	c_old=""
@@ -73,7 +73,7 @@ cn.close
 CreateConn cn,dbtype
 rs.Open "SELECT * FROM main WHERE id=" &Request.QueryString("id"),cn,0,1,1
 	
-if rs.EOF=false then
+if Not rs.EOF then
 %>
 	<!-- #include file="listword.asp" -->
 <%

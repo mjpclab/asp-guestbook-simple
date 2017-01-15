@@ -6,7 +6,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn,dbtype
 rs.Open "SELECT TOP 1 adminpass FROM supervisor",cn,0,1,1
 
-if rs.EOF=false then
+if Not rs.EOF then
 	if Session("adminpass")<>rs(0) then
 		Response.Redirect "admin_login.asp"
 		Response.End
