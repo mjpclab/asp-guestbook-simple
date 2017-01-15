@@ -30,7 +30,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 <form method="post" action="admin_mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
 	<input type="submit" value="删除选定留言" style="margin-top:20px;" />
 	<%while rs.EOF=false%>
-	<!-- #include file="listword.asp" -->
+	<!-- #include file="include/template/message.inc" -->
 	
 	<div class="admin-tools">
 		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs("id")%>" value="<%=rs("id")%>" /><label for="id_<%=rs("id")%>">(选定)</label></span>

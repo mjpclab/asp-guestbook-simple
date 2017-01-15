@@ -76,7 +76,7 @@ rs.Open "SELECT * FROM main WHERE id=" &Request.QueryString("id"),cn,0,1,1
 	
 if Not rs.EOF then
 %>
-	<!-- #include file="listword.asp" -->
+	<!-- #include file="include/template/message.inc" -->
 <%
 end if
 

@@ -27,7 +27,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 %>
 
 <%while rs.EOF=false%>
-<!-- #include file="listword.asp" -->
+<!-- #include file="include/template/message.inc" -->
 <%
 rs.MoveNext
 wend
