@@ -24,7 +24,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 
 CreateConn cn,dbtype
 Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
-get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
+get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
 <form method="post" action="admin_mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">

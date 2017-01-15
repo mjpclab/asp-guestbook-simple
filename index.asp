@@ -24,7 +24,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 
 CreateConn cn,dbtype
 Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
-get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
+get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
 <%while rs.EOF=false%>

@@ -27,12 +27,7 @@
 			<div class="words">
 			<%
 				Dim reinfo
-				set rs1=server.CreateObject("ADODB.Recordset")
-				rs1.open "select TOP 1 * from reply where articleid=" &rs.Fields("id"),cn
-				reinfo=rs1.Fields("reinfo")
-				rs1.close
-				set rs1=nothing
-
+				reinfo=rs.Fields("reinfo")
 				Call convertstr(reinfo, AdminHTMLSupport, AdminUBBSupport, true)
 				Response.Write reinfo
 			%>
