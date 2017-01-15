@@ -9,10 +9,10 @@ if Not isnumeric(Request.QueryString("id")) or Request.QueryString("id")="" then
 end if
 %>
 
-<!-- #include file="inc_dtd.asp" -->
+<!-- #include file="include/template/dtd.inc" -->
 <html>
 <head>
-	<!-- #include file="inc_metatag.asp" -->
+	<!-- #include file="include/template/metatag.inc" -->
 	<title><%=HomeName%> ¡Ù—‘±æ ªÿ∏¥¡Ù—‘</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->

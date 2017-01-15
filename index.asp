@@ -1,10 +1,10 @@
 <!-- #include file="config.asp" -->
 <!-- #include file="include/utility/md5.asp" -->
 
-<!-- #include file="inc_dtd.asp" -->
+<!-- #include file="include/template/dtd.inc" -->
 <html>
 <head>
-	<!-- #include file="inc_metatag.asp" -->
+	<!-- #include file="include/template/metatag.inc" -->
 	<title><%=HomeName%> ¡Ù—‘±æ</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->

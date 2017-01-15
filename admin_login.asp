@@ -1,10 +1,10 @@
 <!-- #include file="config.asp" -->
 <%if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)%>
 
-<!-- #include file="inc_dtd.asp" -->
+<!-- #include file="include/template/dtd.inc" -->
 <html>
 <head>
-	<!-- #include file="inc_metatag.asp" -->
+	<!-- #include file="include/template/metatag.inc" -->
 	<title><%=HomeName%> ¡Ù—‘±æ π‹¿Ìµ«¬º</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->
