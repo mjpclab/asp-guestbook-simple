@@ -34,7 +34,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 	
 	<div class="admin-tools">
 		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs("id")%>" value="<%=rs("id")%>" /><label for="id_<%=rs("id")%>">(Ñ¡¶¨)</label></span>
-		<a class="tool" href="reply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="asset/image/icon_reply.gif" />[»Ø¸´]</a>
+		<a class="tool" href="admin_reply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="asset/image/icon_reply.gif" />[»Ø¸´]</a>
 		<a class="tool" href="del.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ýÁôÑÔ"><img alt="" src="asset/image/icon_del.gif" />[É¾³ý]</a>
 		<% if rs("replied")=true then %><a class="tool" href="delreply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ý»Ø¸´"><img alt="" src="asset/image/icon_delreply.gif" />[É¾³ý»Ø¸´]</a> <% end if %>
 	</div>
