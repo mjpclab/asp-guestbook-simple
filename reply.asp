@@ -1,5 +1,7 @@
-<!-- #include file="config.asp" -->
+<!-- #include file="include/template/page_instruction.inc" -->
 <!-- #include file="include/utility/md5.asp" -->
+<!-- #include file="config.asp" -->
+<!-- #include file="admin_verify.asp" -->
 
 <%
 Response.Expires=-1
@@ -33,7 +35,6 @@ end if
 
 <body onload="sfocus()">
 <div class="outerborder">
-<!-- #include file="admin_verify.asp" -->
 <!-- #include file="admin_top.asp" -->
 
 <%

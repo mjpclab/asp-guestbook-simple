@@ -1,8 +1,4 @@
-<%@ CodePage="936" Language="VBScript" %>
 <%
-Response.Buffer=True
-Response.ContentType="text/html; Charset=gbk"
-
 Const dbtype=2
 Const dbfile="database/data.mdb.db"		'数据库文件位置，使用相对路径，请自行更改
 Const HomeLogo=""				'网站Logo地址

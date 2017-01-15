@@ -1,3 +1,4 @@
+<!-- #include file="include/template/page_instruction.inc" -->
 <!-- #include file="config.asp" -->
 <%if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)%>
 
