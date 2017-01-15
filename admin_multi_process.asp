@@ -23,8 +23,10 @@ if ids<>"" then
 	set cn=server.CreateObject("ADODB.Connection")
 	CreateConn cn,dbtype
 
-	cn.Execute "DELETE FROM reply WHERE articleid IN(" & ids & ")",,1
-	cn.Execute "DELETE FROM main WHERE id IN(" & ids & ")",,1
+	if Not IsEmpty(Request.Form("multi_del")) then
+		cn.Execute "DELETE FROM reply WHERE articleid IN(" & ids & ")",,1
+		cn.Execute "DELETE FROM main WHERE id IN(" & ids & ")",,1
+	end if
 
 	cn.Close
 	set cn=nothing

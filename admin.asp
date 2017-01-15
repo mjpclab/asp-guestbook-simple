@@ -27,9 +27,9 @@ Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
-<form method="post" action="admin_mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
-	<input type="submit" value="删除选定留言" style="margin-top:20px;" />
-	<%while rs.EOF=false%>
+<form method="post" action="admin_multi_process.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
+	<input type="submit" name="multi_del" value="删除选定留言" class="admin-multi-submit"/>
+	<%while Not rs.EOF%>
 	<!-- #include file="include/template/message.inc" -->
 	
 	<div class="admin-tools">
@@ -43,7 +43,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo 
 	wend
 	%>
 
-	<input type="submit" value="删除选定留言" style="margin-top:20px;" />
+	<input type="submit" name="multi_del" value="删除选定留言" class="admin-multi-submit"/>
 </form>
 
 <!-- #include file="include/template/page_number.inc" -->

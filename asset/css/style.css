@@ -272,6 +272,10 @@ form .command {
 	width: 120px;
 }
 
+.admin-multi-submit {
+	margin-top: 20px;
+}
+
 .admin-tools {
 	overflow: hidden;
 }
@@ -279,10 +283,6 @@ form .command {
 	display: block;
 	float: left;
 	margin-right: 1em;
-}
-
-.reply {
-
 }
 
 .reply .field .value {

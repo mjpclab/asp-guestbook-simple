@@ -27,7 +27,7 @@ Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
-<%while rs.EOF=false%>
+<%while Not rs.EOF%>
 <!-- #include file="include/template/message.inc" -->
 <%
 rs.MoveNext
