@@ -37,14 +37,9 @@ homepage1=server.HTMLEncode(Request.Form("ihomepage"))
 homepage1=replace(replace(homepage1," ",""),"script:","script",1,-1,1)
 if lcase(left(homepage1,7))<>"http://" and lcase(left(homepage1,6))<>"ftp://" and homepage1<>"" then homepage1="http://" & homepage1
 
-if Not HtmlSupport then
-	content1=server.HTMLEncode(Request.Form("icontent"))
-else
-	content1=Request.Form("icontent")
-	content1=replace(content1,"<%","< %")
-end if
+content1=replace(Request.Form("icontent"),"<%","< %")
 '-------------------------------------
-rs.Open "SELECT * FROM main WHERE id IS NULL",cn,0,3,1
+rs.Open "SELECT TOP 1 * FROM main WHERE id IS NULL",cn,0,3,1
 rs.AddNew
 rs("name")=name1
 rs("title")=title1

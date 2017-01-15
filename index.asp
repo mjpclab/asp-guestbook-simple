@@ -1,4 +1,5 @@
 <!-- #include file="include/template/page_instruction.inc" -->
+<!-- #include file="include/utility/ubbcode.asp" -->
 <!-- #include file="config.asp" -->
 
 <!-- #include file="include/template/dtd.inc" -->

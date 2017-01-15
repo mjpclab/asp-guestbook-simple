@@ -3,8 +3,10 @@
 	<div class="content">
 		<div class="words">
 		<%
-			article=rs("article")
+			Dim article
+			article=rs.Fields("article")
 			if article<>"" then
+				Call convertstr(article, HTMLSupport, UBBSupport, false)
 				Response.Write article
 			else
 				Response.Write "(ÎÞÄÚÈÝ)"
@@ -24,11 +26,15 @@
 			<div class="content">
 			<div class="words">
 			<%
+				Dim reinfo
 				set rs1=server.CreateObject("ADODB.Recordset")
 				rs1.open "select TOP 1 * from reply where articleid=" &rs("id"),cn
-				response.write rs1("reinfo")
+				reinfo=rs1.Fields("reinfo")
 				rs1.close
 				set rs1=nothing
+
+				Call convertstr(reinfo, AdminHTMLSupport, AdminUBBSupport, true)
+				Response.Write reinfo
 			%>
 			</div>
 		</div>

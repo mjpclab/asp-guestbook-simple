@@ -15,19 +15,14 @@ CreateConn cn,dbtype
 
 if isnumeric(request.Form("mainid"))=true then
 	dim tcon
-	if AdminHtmlSupport then
-		tcon=request("rcontent")
-		tcon=replace(tcon,"<%","< %")
-	else
-		tcon=server.HTMLEncode(request("rcontent"))
-	end if
-	
-	rs.Open "SELECT * FROM main WHERE id=" & request("mainid"),cn,0,3,1
+	tcon=replace(Request.Form("rcontent"),"<%","< %")
+
+	rs.Open "SELECT TOP 1 * FROM main WHERE id=" & request("mainid"),cn,0,3,1
 	if Not rs.EOF then		'ÁôÑÔ´æÔÚ
 		rs("replied")=true
 		rs.Update
 		rs.Close
-		rs.Open "SELECT * FROM reply WHERE articleid=" &request("mainid"),cn,0,3,1
+		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" &request("mainid"),cn,0,3,1
 		if rs.EOF=true then	'ÐÂ»Ø¸´
 			rs.Close 
 			rs.Open "INSERT INTO reply VALUES('" &Request.Form("mainid")& "','" &tcon& "')",cn
