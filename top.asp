@@ -6,6 +6,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 	{
 		if (!frm.iname.value) {alert("请输入姓名。"); frm.iname.focus(); return false;}
 		if (!frm.ititle.value) {alert("请输入标题。"); frm.ititle.focus(); return false;}
+		if (!frm.ivcode.value) {alert("请输入验证码。"); frm.ivcode.focus(); return false;}
 		return true;
 	}
 </script>
@@ -74,7 +75,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<span class="text">验证</span>
+					<span class="text">验证</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="ivcode" autocomplete="off" /><img class="captcha" src="show_vcode.asp" />

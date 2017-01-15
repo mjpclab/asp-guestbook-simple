@@ -25,7 +25,7 @@
 
 <body onload="document.getElementById('ioldpass').focus();">
 <div class="outerborder">
-
+<!-- #include file="admin_top.asp" -->
 <div class="topic chpass">
 	<h2 class="title">ÐÞ¸ÄÃÜÂë</h2>
 	<form class="content" method="post" action="admin_savepass.asp" onsubmit="return checkpass(this)" name="form4">
