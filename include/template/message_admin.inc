@@ -1,4 +1,7 @@
 <%
+Dim auditting
+auditting=rs.Fields("auditting")
+
 Dim article
 article=rs.Fields("article")
 if article<>"" then
@@ -38,5 +41,6 @@ end if
 	<div class="status">
 		<span class="item author">作者: <% =rs.Fields("name") %></span>
 		<span class="item logdate">发表于: <% =rs.Fields("logdate") %></span>
+		<%if auditting then%><span class="item auditting">(待审核)</span><%end if%>
 	</div>
 </div>

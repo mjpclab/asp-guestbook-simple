@@ -4,7 +4,9 @@ Const dbfile = "database/data.mdb.db"		'数据库文件位置，使用相对路径，请自行更改
 Const HomeLogo = ""				'网站Logo地址
 Const HomeName = "MyHomePage"			'网站名称
 Const HomeAddr = "http://mjpclab.net/"	'网站地址
+
 Const VCodeCount = 4			'验证码长度
+Const NeedAudit = False			'留言是否需要审核 True:是 False:否
 
 Const HTMLSupport = False			'访客留言是否支持HTML True:是 False:否
 Const AdminHTMLSupport = True		'管理员回复是否支持HTML

@@ -49,6 +49,7 @@ rs.Fields("qqid")=qqid1
 rs.Fields("homepage")=homepage1
 rs.Fields("logdate")=cstr(now())
 rs.Fields("article")=content1
+rs.Fields("auditting")=NeedAudit
 rs.Update
 
 rs.Close

@@ -28,7 +28,7 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo 
 %>
 
 <%while Not rs.EOF%>
-<!-- #include file="include/template/message.inc" -->
+<!-- #include file="include/template/message_guest.inc" -->
 <%
 rs.MoveNext
 wend

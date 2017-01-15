@@ -17,8 +17,10 @@ if isnumeric(request.Form("mainid")) then
 	dim reinfo
 	reinfo=replace(Request.Form("rcontent"),"<%","< %")
 
-	rs.Open "SELECT TOP 1 1 FROM main WHERE id=" & Request.Form("mainid"),cn,0,3,1
+	rs.Open "SELECT TOP 1 auditting FROM main WHERE id=" & Request.Form("mainid"),cn,0,3,1
 	if Not rs.EOF then		'ÁôÑÔ´æÔÚ
+		rs.Fields("auditting")=False
+		rs.Update
 		rs.Close
 		rs.Open "SELECT TOP 1 * FROM reply WHERE articleid=" & Request.Form("mainid"),cn,0,3,1
 		if rs.EOF then	'ÐÂ»Ø¸´

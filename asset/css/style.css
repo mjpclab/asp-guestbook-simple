@@ -189,6 +189,10 @@ form .command {
 	margin-right: 1em;
 }
 
+.topic .status .auditting {
+	font-weight: bold;
+}
+
 .topic .page-num {
 	display: inline-block;
 	padding: 0.15em 0.5em;
@@ -279,6 +283,10 @@ form .command {
 .admin-tools {
 	overflow: hidden;
 }
+* .admin-tools {
+	zoom:1;
+}
+
 .admin-tools .tool {
 	display: block;
 	float: left;

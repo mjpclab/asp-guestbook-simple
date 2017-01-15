@@ -53,7 +53,7 @@ end if
 
 <div class="topic reply">
 	<h2 class="title">ªÿ∏¥¡Ù—‘</h2>
-	<form class="content" method="post" action="admin_save_reply.asp" onsubmit="return submitcheck(this)" name="form3">
+	<form class="content" method="post" action="admin_savereply.asp" onsubmit="return submitcheck(this)" name="form3">
 		<div class="field">
 			<span class="value">
 				<textarea class="textarea" name="rcontent" id="rcontent" autofocus="autofocus"><%=reinfo_old%></textarea>
@@ -68,7 +68,7 @@ end if
 </div>
 
 <%if Not rs.EOF then%>
-	<!-- #include file="include/template/message.inc" -->
+	<!-- #include file="include/template/message_admin.inc" -->
 <%
 end if
 
