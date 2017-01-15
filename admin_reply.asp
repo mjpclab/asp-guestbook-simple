@@ -45,7 +45,7 @@ CreateConn cn,dbtype
 rs.Open "SELECT * FROM reply WHERE articleid=" &Request.QueryString("id"),cn,0,1,1
 
 if Not rs.EOF then
-	c_old=rs("reinfo")
+	c_old=rs.Fields("reinfo")
 else
 	c_old=""
 end if

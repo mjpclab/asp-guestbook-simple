@@ -21,7 +21,7 @@ rs.Open "SELECT TOP 1 * FROM supervisor",cn,0,1,1
 
 Session("adminpass")=md5(request("iadminpass"),16)
 if Not rs.EOF then
-	if Session("adminpass")=rs(0) then
+	if Session("adminpass")=rs.Fields(0) then
 		session.Timeout=clng(AdminTimeOut)
 		Response.Redirect "admin.asp"
 	else

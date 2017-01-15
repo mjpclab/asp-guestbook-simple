@@ -41,13 +41,13 @@ content1=replace(Request.Form("icontent"),"<%","< %")
 '-------------------------------------
 rs.Open "SELECT TOP 1 * FROM main WHERE id IS NULL",cn,0,3,1
 rs.AddNew
-rs("name")=name1
-rs("title")=title1
-rs("email")=email1
-rs("qqid")=qqid1
-rs("homepage")=homepage1
-rs("logdate")=cstr(now())
-rs("article")=content1
+rs.Fields("name")=name1
+rs.Fields("title")=title1
+rs.Fields("email")=email1
+rs.Fields("qqid")=qqid1
+rs.Fields("homepage")=homepage1
+rs.Fields("logdate")=cstr(now())
+rs.Fields("article")=content1
 rs.Update
 
 rs.Close

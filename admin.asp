@@ -33,10 +33,10 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC
 	<!-- #include file="include/template/message.inc" -->
 	
 	<div class="admin-tools">
-		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs("id")%>" value="<%=rs("id")%>" /><label for="id_<%=rs("id")%>">(Ñ¡¶¨)</label></span>
-		<a class="tool" href="admin_reply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="asset/image/icon_reply.gif" />[»Ø¸´]</a>
-		<a class="tool" href="admin_del.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ýÁôÑÔ"><img alt="" src="asset/image/icon_del.gif" />[É¾³ý]</a>
-		<% if rs("replied")=true then %><a class="tool" href="admin_delreply.asp?id=<%=rs("id")%>&amp;page=<%=ipage%>" title="É¾³ý»Ø¸´"><img alt="" src="asset/image/icon_delreply.gif" />[É¾³ý»Ø¸´]</a> <% end if %>
+		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs.Fields("id")%>" value="<%=rs.Fields("id")%>" /><label for="id_<%=rs.Fields("id")%>">(Ñ¡¶¨)</label></span>
+		<a class="tool" href="admin_reply.asp?id=<%=rs.Fields("id")%>&amp;page=<%=ipage%>" title="»Ø¸´´ËÁôÑÔ"><img alt="" src="asset/image/icon_reply.gif" />[»Ø¸´]</a>
+		<a class="tool" href="admin_del.asp?id=<%=rs.Fields("id")%>&amp;page=<%=ipage%>" title="É¾³ýÁôÑÔ"><img alt="" src="asset/image/icon_del.gif" />[É¾³ý]</a>
+		<% if rs.Fields("replied") then %><a class="tool" href="admin_delreply.asp?id=<%=rs.Fields("id")%>&amp;page=<%=ipage%>" title="É¾³ý»Ø¸´"><img alt="" src="asset/image/icon_delreply.gif" />[É¾³ý»Ø¸´]</a> <% end if %>
 	</div>
 	<%
 	rs.MoveNext

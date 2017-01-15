@@ -29,7 +29,7 @@ else
 end if
 
 rs.Open countsql,cn,,,1
-ItemsCount=rs(0)
+ItemsCount=rs.Fields(0)
 rs.Close
 
 if ItemsCount mod ItemsEachPage <>0 then

@@ -7,7 +7,7 @@ CreateConn cn,dbtype
 rs.Open "SELECT TOP 1 adminpass FROM supervisor",cn,0,1,1
 
 if Not rs.EOF then
-	if Session("adminpass")<>rs(0) then
+	if Session("adminpass")<>rs.Fields(0) then
 		Response.Redirect "admin_login.asp"
 		Response.End
 	end if
