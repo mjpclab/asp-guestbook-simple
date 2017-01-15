@@ -27,7 +27,7 @@ Dim ItemsCount,PagesCount,CurrentItemsCount,ipage
 get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT * FROM main","id DEC",Request.QueryString("page"),ItemsPerPage,ItemsCount,PagesCount,CurrentItemsCount,ipage
 %>
 
-<form method="post" action="mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
+<form method="post" action="admin_mdel.asp" onsubmit="return confirm('确实要删除选定留言吗？')">
 	<input type="submit" value="删除选定留言" style="margin-top:20px;" />
 	<%while rs.EOF=false%>
 	<!-- #include file="listword.asp" -->
