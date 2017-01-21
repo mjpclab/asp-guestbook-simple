@@ -28,4 +28,3 @@ Const AdminTimeOut = 20		'管理员登录超时(分)
 
 Const ItemsPerPage = 5		'每页显示的留言数
 %>
-<!-- #include file = "include/utility/common.asp" -->

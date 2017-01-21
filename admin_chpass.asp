@@ -1,5 +1,6 @@
 <!-- #include file="include/template/page_instruction.inc" -->
-<!-- #include file="config.asp" -->
+<!-- #include file="config/config.asp" -->
+<!-- #include file="include/utility/common.asp" -->
 <!-- #include file="admin_verify.asp" -->
 
 <!-- #include file="include/template/dtd.inc" -->

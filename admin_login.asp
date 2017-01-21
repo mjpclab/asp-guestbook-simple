@@ -1,5 +1,6 @@
 <!-- #include file="include/template/page_instruction.inc" -->
-<!-- #include file="config.asp" -->
+<!-- #include file="config/config.asp" -->
+<!-- #include file="include/utility/common.asp" -->
 <%if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)%>
 
 <!-- #include file="include/template/dtd.inc" -->

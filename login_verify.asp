@@ -1,6 +1,7 @@
 <!-- #include file="include/template/page_instruction.inc" -->
+<!-- #include file="config/config.asp" -->
+<!-- #include file="include/utility/common.asp" -->
 <!-- #include file="include/utility/md5.asp" -->
-<!-- #include file="config.asp" -->
 <!-- #include file="message.asp" -->
 <%
 response.expires=-1
