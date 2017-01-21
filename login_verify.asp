@@ -1,12 +1,12 @@
 <!-- #include file="include/template/page_instruction.inc" -->
 <!-- #include file="include/utility/md5.asp" -->
 <!-- #include file="config.asp" -->
-
+<!-- #include file="message.asp" -->
 <%
 response.expires=-1
 if VCodeCount>0 and (Request.Form("ivcode")<>session("vcode") or session("vcode")="") then
 	session("vcode")=""
-	Call MessagePage("ÑéÖ¤Âë´íÎó¡£","admin_login.asp")
+	Call ErrorPage("ÑéÖ¤Âë´íÎó¡£","admin_login.asp")
 	Response.End
 else
 	session("vcode")=""
@@ -25,11 +25,11 @@ if Not rs.EOF then
 		session.Timeout=clng(AdminTimeOut)
 		Response.Redirect "admin.asp"
 	else
-		Call MessagePage("ÃÜÂë´íÎó¡£","admin_login.asp")
+		Call ErrorPage("ÃÜÂë´íÎó¡£","admin_login.asp")
 		Response.End
 	end if
 else
-	Call MessagePage("ÃÜÂë´íÎó¡£","admin_login.asp")
+	Call ErrorPage("ÃÜÂë´íÎó¡£","admin_login.asp")
 	Response.End
 end if
 

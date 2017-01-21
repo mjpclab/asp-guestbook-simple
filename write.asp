@@ -1,16 +1,17 @@
 <!-- #include file="include/template/page_instruction.inc" -->
 <!-- #include file="config.asp" -->
+<!-- #include file="message.asp" -->
 <%
 Response.Expires=-1
 if Request.Form("iname")="" then
-	Call MessagePage("姓名不能为空。","index.asp")
+	Call ErrorPage("姓名不能为空。","index.asp")
 	Response.End
 elseif Request.Form("ititle")="" then
-	Call MessagePage("标题不能为空。","index.asp")
+	Call ErrorPage("标题不能为空。","index.asp")
 	Response.End
 elseif VCodeCount>0 and (Request.Form("ivcode")<>session("vcode") or session("vcode")="") then
 	session("vcode")=""
-	Call MessagePage("验证码错误。","index.asp")
+	Call ErrorPage("验证码错误。","index.asp")
 	Response.End
 else
 	session("vcode")=""

@@ -2,7 +2,7 @@
 <!-- #include file="include/utility/md5.asp" -->
 <!-- #include file="config.asp" -->
 <!-- #include file="admin_verify.asp" -->
-
+<!-- #include file="message.asp" -->
 <%
 response.expires=-1
 
@@ -21,10 +21,10 @@ if Not rs.EOF then
 		rs.Close:cn.Close : set rs=nothing : set cn=nothing
 		response.Redirect "admin.asp"
 	else
-		Call MessagePage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
+		Call ErrorPage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
 	end if
 else
-	Call MessagePage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
+	Call ErrorPage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
 end if
 
 rs.Close

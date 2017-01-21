@@ -68,25 +68,4 @@ rs.Open "SELECT * FROM (" & _
 			") ORDER BY " &replace(replace(keyword,"INC","DESC"),"DEC","ASC")& _
 		") ORDER BY " &replace(replace(keyword,"INC","ASC"),"DEC","DESC"),cn,,,1
 end sub
-'==================================
-sub MessagePage(strMessage,backPage)
-	%>
-	<!-- #include file="include/template/dtd.inc" -->
-	<html>
-	<head>
-		<!-- #include file="include/template/metatag.inc" -->
-		<title><%=HomeName%> ¡Ù—‘±æ</title>
-		<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
-		<!-- #include file="asset/css/style.asp" -->
-	</head>
-	<body>
-		<%=strMessage%><br />
-		<a href="<%=backPage%>">[∑µªÿ]</a>
-		<script type="text/javascript" defer="defer" async="async">
-			alert('<%=strMessage%>');window.location.replace('<%=backPage%>');
-		</script>
-	</body>
-	</html>
-	<%
-end sub
 %>

@@ -314,3 +314,7 @@ form .command {
 .footer a:hover {
 	color: #000;
 }
+
+.message-page p {
+	text-align: center;
+}
