@@ -240,6 +240,9 @@ form .command {
 .write-words input.text {
 	width: 110px;
 }
+.write-words input.ititle {
+	width: 180px;
+}
 
 .write-words textarea.textarea {
 	width: 180px;

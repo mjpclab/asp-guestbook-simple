@@ -67,18 +67,18 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		<div class="article">
 			<div class="field">
 				<span class="label">
-					<span class="text">标题</span><span class="required">*</span>
-				</span>
-				<span class="value">
-					<input class="text" type="text" name="ititle" maxlength="64" />
-				</span>
-			</div>
-			<div class="field">
-				<span class="label">
 					<span class="text">验证</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="ivcode" autocomplete="off" /><img class="captcha" src="show_vcode.asp" />
+				</span>
+			</div>
+			<div class="field">
+				<span class="label">
+					<span class="text">标题</span><span class="required">*</span>
+				</span>
+				<span class="value">
+					<input class="text ititle" type="text" name="ititle" maxlength="64" />
 				</span>
 			</div>
 			<div class="field">
@@ -92,7 +92,6 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		</div>
 		<div class="command">
 			<input type="submit" value="发表留言" />
-			<input type="reset" value="重写留言" />
 		</div>
 	</form>
 </div>
