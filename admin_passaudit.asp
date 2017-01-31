@@ -13,7 +13,7 @@ end if
 set cn=server.CreateObject("ADODB.Connection")
 CreateConn cn
 
-cn.Execute "UPDATE main SET auditting=false WHERE id=" & Request.QueryString("id"),,1
+cn.Execute "UPDATE main SET auditting=false WHERE id=" & Request.QueryString("id"),,129
 
 cn.Close
 set cn=nothing

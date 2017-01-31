@@ -25,10 +25,10 @@ if ids<>"" then
 	CreateConn cn
 
 	if Not IsEmpty(Request.Form("multi_del")) then
-		cn.Execute "DELETE FROM reply WHERE articleid IN(" & ids & ")",,1
-		cn.Execute "DELETE FROM main WHERE id IN(" & ids & ")",,1
+		cn.Execute "DELETE FROM reply WHERE articleid IN(" & ids & ")",,129
+		cn.Execute "DELETE FROM main WHERE id IN(" & ids & ")",,129
 	elseif Not IsEmpty(Request.Form("multi_passaudit")) then
-		cn.Execute "UPDATE main SET auditting=false WHERE id IN(" & ids & ")",,1
+		cn.Execute "UPDATE main SET auditting=false WHERE id IN(" & ids & ")",,129
 	end if
 
 	cn.Close

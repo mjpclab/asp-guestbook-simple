@@ -14,7 +14,7 @@ set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn
 
-cn.Execute "DELETE FROM reply WHERE articleid=" & Request.QueryString("id"),,1
+cn.Execute "DELETE FROM reply WHERE articleid=" & Request.QueryString("id"),,129
 
 cn.Close
 set cn=nothing
