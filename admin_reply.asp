@@ -45,6 +45,7 @@ set rs=server.CreateObject("ADODB.Recordset")
 CreateConn cn
 rs.Open "SELECT main.*,reply.reinfo FROM main LEFT JOIN reply ON main.id=reply.articleid WHERE main.id=" &Request.QueryString("id"),cn,0,1,1
 
+Dim reinfo_old
 if Not rs.EOF then
 	reinfo_old=rs.Fields("reinfo")
 else

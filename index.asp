@@ -19,6 +19,8 @@
 
 <%
 response.expires=-1
+
+
 Dim cn,rs
 set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")

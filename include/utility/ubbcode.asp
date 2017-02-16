@@ -184,6 +184,7 @@ else
 end if
 end function
 
+Dim charCr,charLf,charCrLf
 charCr=Chr(13)
 charLf=Chr(10)
 charCrLf=charCr & charLf

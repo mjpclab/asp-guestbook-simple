@@ -14,6 +14,7 @@ rs.Open "SELECT adminpass FROM supervisor",cn,1,3,1
 
 if Not rs.EOF then
 	if md5(Request.Form("ioldpass"),16)=rs.Fields(0) then
+		Dim pwd
 		pwd=md5(Request.Form("inewpass1"),16)
 		Session("adminpass")=pwd
 		rs.Fields(0)=pwd

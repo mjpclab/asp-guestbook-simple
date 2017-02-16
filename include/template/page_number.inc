@@ -2,6 +2,7 @@
 	<h3 class="title">[¡Ù—‘∑÷“≥]</h3>
 	<div class="content">
 	<%
+	Dim j
 	for j=1 to PagesCount
 		if j=ipage then
 			Response.Write "<span class=""page-num"">" & j & "</span>"
