@@ -184,20 +184,16 @@ else
 end if
 end function
 
-Dim charCr,charLf,charCrLf
-charCr=Chr(13)
-charLf=Chr(10)
-charCrLf=charCr & charLf
 const htmlBr="<br/>"
 Sub NewLineToHtmlBr(byref str)
-	if InStr(str,charCrLf)>0 then
-		str=replace(str,charCrLf,htmlBr)
+	if InStr(str,vbCrLf)>0 then
+		str=replace(str,vbCrLf,htmlBr)
 	end if
-	if InStr(str,charCr)>0 then
-		str=replace(str,charCr,htmlBr)
+	if InStr(str,vbCr)>0 then
+		str=replace(str,vbCr,htmlBr)
 	end if
-	if InStr(str,charLf)>0 then
-		str=replace(str,charLf,htmlBr)
+	if InStr(str,vbLf)>0 then
+		str=replace(str,vbLf,htmlBr)
 	end if
 End Sub
 
