@@ -150,6 +150,10 @@ form .command {
 	word-break: break-all;
 }
 
+.topic .words a {
+	padding: 0.25em 0;
+}
+
 .topic .icons {
 	white-space: nowrap;
 	text-align: right;
