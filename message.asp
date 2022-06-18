@@ -1,6 +1,5 @@
 <%
 sub ErrorPage(message, backPage)
-	Response.Status="403 Forbidden"
 	Call MessagePage(message, backPage)
 end sub
 
