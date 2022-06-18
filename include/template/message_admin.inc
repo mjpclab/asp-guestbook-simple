@@ -7,7 +7,7 @@ article=rs.Fields("article")
 if article<>"" then
 	Call convertstr(article, HTMLSupport, UBBSupport, false)
 else
-	article = "(ÎŞÄÚÈİ)"
+	article = "(æ— å†…å®¹)"
 end if
 
 Dim reinfo
@@ -24,14 +24,14 @@ end if
 		<div class="words"><%=article%></div>
 		<div class="icons">
 		<%
-		if rs.Fields("email")<>"" then Response.Write "<a href=""mailto:" &rs.Fields("email")& """ title=""×÷ÕßÓÊÏä£º" &rs.Fields("email")& """><img src=""asset/image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
-		if rs.Fields("qqid")<>"" then Response.Write "<span title=""×÷ÕßQQ£º" &rs.Fields("qqid")& """><img src=""asset/image/icon_qq.gif"" alt=""×÷ÕßQQ£º" &rs.Fields("qqid")& """ style=""border:0px;"" /></span>"
-		if rs.Fields("homepage")<>"" then Response.Write "<a href=""" &rs.Fields("homepage")& """ target=""_blank"" title=""×÷ÕßÖ÷Ò³£º" &rs.Fields("homepage")& """><img src=""asset/image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
+		if rs.Fields("email")<>"" then Response.Write "<a href=""mailto:" &rs.Fields("email")& """ title=""ä½œè€…é‚®ç®±ï¼š" &rs.Fields("email")& """><img src=""asset/image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
+		if rs.Fields("qqid")<>"" then Response.Write "<span title=""ä½œè€…QQï¼š" &rs.Fields("qqid")& """><img src=""asset/image/icon_qq.gif"" alt=""ä½œè€…QQï¼š" &rs.Fields("qqid")& """ style=""border:0px;"" /></span>"
+		if rs.Fields("homepage")<>"" then Response.Write "<a href=""" &rs.Fields("homepage")& """ target=""_blank"" title=""ä½œè€…ä¸»é¡µï¼š" &rs.Fields("homepage")& """><img src=""asset/image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
 		%>
 		</div>
 		<%if reinfo<>"" then%>
 		<div class="reply">
-			<h3 class="title">°æÖ÷»Ø¸´£º</h3>
+			<h3 class="title">ç‰ˆä¸»å›å¤ï¼š</h3>
 			<div class="content">
 			<div class="words"><%=reinfo%></div>
 		</div>
@@ -39,8 +39,8 @@ end if
 		<%end if%>
 	</div>
 	<div class="status">
-		<span class="item author">×÷Õß: <% =rs.Fields("name") %></span>
-		<span class="item logdate">·¢±íÓÚ: <% =rs.Fields("logdate") %></span>
-		<%if auditting then%><span class="item auditting">(´ıÉóºË)</span><%end if%>
+		<span class="item author">ä½œè€…: <% =rs.Fields("name") %></span>
+		<span class="item logdate">å‘è¡¨äº: <% =rs.Fields("logdate") %></span>
+		<%if auditting then%><span class="item auditting">(å¾…å®¡æ ¸)</span><%end if%>
 	</div>
 </div>

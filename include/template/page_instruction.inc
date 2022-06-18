@@ -1,7 +1,7 @@
-<%@ CodePage="936" Language="VBScript" %>
+<%@ CodePage="65001" Language="VBScript" %>
 <%
 Option Explicit
 
 Response.Buffer=True
-Response.ContentType="text/html; Charset=gbk"
+Response.ContentType="text/html; Charset=utf-8"
 %>

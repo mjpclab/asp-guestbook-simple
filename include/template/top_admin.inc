@@ -17,8 +17,8 @@
 			page=Request.QueryString("page")
 		end if
 		%>
-		 &raquo; <a href="index.asp<%if page<>"" then%>?page=<%=page%><%end if%>">ÁôÑÔ±¾</a>
-		 &raquo; <a href="admin.asp<%if page<>"" then%>?page=<%=page%><%end if%>">¹ÜÀí</a>
+		 &raquo; <a href="index.asp<%if page<>"" then%>?page=<%=page%><%end if%>">ç•™è¨€æœ¬</a>
+		 &raquo; <a href="admin.asp<%if page<>"" then%>?page=<%=page%><%end if%>">ç®¡ç†</a>
 	</h1>
-	<span><a href="admin_chpass.asp">ĞŞ¸ÄÃÜÂë</a><a href="admin_compact.asp">Ñ¹ËõÊı¾İ¿â</a><a href="admin_logoff.asp">×¢Ïú</a></span>
+	<span><a href="admin_chpass.asp">ä¿®æ”¹å¯†ç </a><a href="admin_compact.asp">å‹ç¼©æ•°æ®åº“</a><a href="admin_logoff.asp">æ³¨é”€</a></span>
 </div>

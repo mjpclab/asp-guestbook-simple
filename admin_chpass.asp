@@ -7,17 +7,17 @@
 <html>
 <head>
 	<!-- #include file="include/template/metatag.inc" -->
-	<title><%=HomeName%> ÁôÑÔ±¾ ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂë</title>
+	<title><%=HomeName%> ç•™è¨€æœ¬ ä¿®æ”¹ç®¡ç†å‘˜å¯†ç </title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->
 
 	<script type="text/javascript">
 		function checkpass(cobject)
 		{
-			if (cobject.ioldpass.value==="") {alert("ÇëÊäÈëÔ­ÃÜÂë£¡"); cobject.ioldpass.focus(); return false;}
-			if (cobject.inewpass1.value==="") {alert("ÇëÊäÈëĞÂÃÜÂë£¡"); cobject.inewpass1.focus(); return false;}
-			if (cobject.inewpass2.value==="") {alert("ÇëÊäÈëÈ·ÈÏÃÜÂë£¡"); cobject.inewpass2.focus(); return false;}
-			if (cobject.inewpass1.value!==cobject.inewpass2.value) {alert("ĞÂÃÜÂëÓëÈ·ÈÏÃÜÂë²»Í¬£¬ÇëÖØĞÂÊäÈë£¡"); cobject.inewpass1.focus(); return false;}
+			if (cobject.ioldpass.value==="") {alert("è¯·è¾“å…¥åŸå¯†ç ï¼"); cobject.ioldpass.focus(); return false;}
+			if (cobject.inewpass1.value==="") {alert("è¯·è¾“å…¥æ–°å¯†ç ï¼"); cobject.inewpass1.focus(); return false;}
+			if (cobject.inewpass2.value==="") {alert("è¯·è¾“å…¥ç¡®è®¤å¯†ç ï¼"); cobject.inewpass2.focus(); return false;}
+			if (cobject.inewpass1.value!==cobject.inewpass2.value) {alert("æ–°å¯†ç ä¸ç¡®è®¤å¯†ç ä¸åŒï¼Œè¯·é‡æ–°è¾“å…¥ï¼"); cobject.inewpass1.focus(); return false;}
 			
 			return true;
 		}
@@ -28,22 +28,22 @@
 <div class="outerborder">
 <!-- #include file="include/template/top_admin.inc" -->
 <div class="topic chpass">
-	<h2 class="title">ĞŞ¸ÄÃÜÂë</h2>
+	<h2 class="title">ä¿®æ”¹å¯†ç </h2>
 	<form class="content" method="post" action="admin_savepass.asp" onsubmit="return checkpass(this)" name="form4">
 		<div class="field">
-			<span class="label">Ô­ÃÜÂë£º</span>
+			<span class="label">åŸå¯†ç ï¼š</span>
 			<span class="value"><input type="password" name="ioldpass" id="ioldpass" maxlength="16" autofocus="autofocus" /></span>
 		</div>
 		<div class="field">
-			<span class="label">ĞÂÃÜÂë£º</span>
+			<span class="label">æ–°å¯†ç ï¼š</span>
 			<span class="value"><input type="password" name="inewpass1" id="inewpass1" maxlength="16" /></span>
 		</div>
 		<div class="field">
-			<span class="label">È·ÈÏÃÜÂë£º</span>
+			<span class="label">ç¡®è®¤å¯†ç ï¼š</span>
 			<span class="value"><input type="password" name="inewpass2" id="inewpass2" maxlength="16" /></span>
 		</div>
 		<div class="command">
-			<input value="È·¶¨" type="submit" />
+			<input value="ç¡®å®š" type="submit" />
 		</div>
 	</form>
 </div>

@@ -8,7 +8,7 @@
 <html>
 <head>
 	<!-- #include file="include/template/metatag.inc" -->
-	<title><%=HomeName%> ÁôÑÔ±¾ ¹ÜÀí</title>
+	<title><%=HomeName%> ç•™è¨€æœ¬ ç®¡ç†</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->
 </head>
@@ -29,24 +29,24 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo 
 %>
 
 <form method="post" action="admin_multi_process.asp">
-	<input type="submit" name="multi_passaudit" value="Í¨¹ıÉóºËÑ¡¶¨ÁôÑÔ" class="admin-multi-submit" onclick="return confirm('È·ÊµÒªÍ¨¹ıÉóºËÑ¡¶¨ÁôÑÔÂğ£¿');"/>
-	<input type="submit" name="multi_del" value="É¾³ıÑ¡¶¨ÁôÑÔ" class="admin-multi-submit" onclick="return confirm('È·ÊµÒªÉ¾³ıÑ¡¶¨ÁôÑÔÂğ£¿');"/>
+	<input type="submit" name="multi_passaudit" value="é€šè¿‡å®¡æ ¸é€‰å®šç•™è¨€" class="admin-multi-submit" onclick="return confirm('ç¡®å®è¦é€šè¿‡å®¡æ ¸é€‰å®šç•™è¨€å—ï¼Ÿ');"/>
+	<input type="submit" name="multi_del" value="åˆ é™¤é€‰å®šç•™è¨€" class="admin-multi-submit" onclick="return confirm('ç¡®å®è¦åˆ é™¤é€‰å®šç•™è¨€å—ï¼Ÿ');"/>
 	<%while Not rs.EOF%>
 	<!-- #include file="include/template/message_admin.inc" -->
 	<div class="admin-tools">
-		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs.Fields("id")%>" value="<%=rs.Fields("id")%>" /><label for="id_<%=rs.Fields("id")%>">(Ñ¡¶¨)</label></span>
-		<%if auditting then%><a class="tool" href="admin_passaudit.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="Í¨¹ıÉóºË"><img alt="" src="asset/image/icon_pass.gif" />[Í¨¹ıÉóºË]</a><%end if%>
-		<a class="tool" href="admin_del.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="É¾³ıÁôÑÔ"><img alt="" src="asset/image/icon_del.gif" />[É¾³ı]</a>
-		<a class="tool" href="admin_reply.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="<%if auditting then%>Í¨¹ıÉóºË²¢<%end if%>»Ø¸´ÁôÑÔ"><img alt="" src="asset/image/icon_reply.gif" />[<%if auditting then%>Í¨¹ıÉóºË²¢<%end if%>»Ø¸´]</a>
-		<% if rs.Fields("reinfo").ActualSize>0 then %><a class="tool" href="admin_delreply.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="É¾³ı»Ø¸´"><img alt="" src="asset/image/icon_delreply.gif" />[É¾³ı»Ø¸´]</a> <% end if %>
+		<span class="tool"><input type="checkbox" name="id" id="id_<%=rs.Fields("id")%>" value="<%=rs.Fields("id")%>" /><label for="id_<%=rs.Fields("id")%>">(é€‰å®š)</label></span>
+		<%if auditting then%><a class="tool" href="admin_passaudit.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="é€šè¿‡å®¡æ ¸"><img alt="" src="asset/image/icon_pass.gif" />[é€šè¿‡å®¡æ ¸]</a><%end if%>
+		<a class="tool" href="admin_del.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="åˆ é™¤ç•™è¨€"><img alt="" src="asset/image/icon_del.gif" />[åˆ é™¤]</a>
+		<a class="tool" href="admin_reply.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="<%if auditting then%>é€šè¿‡å®¡æ ¸å¹¶<%end if%>å›å¤ç•™è¨€"><img alt="" src="asset/image/icon_reply.gif" />[<%if auditting then%>é€šè¿‡å®¡æ ¸å¹¶<%end if%>å›å¤]</a>
+		<% if rs.Fields("reinfo").ActualSize>0 then %><a class="tool" href="admin_delreply.asp?id=<%=rs.Fields("id")%>&page=<%=ipage%>" title="åˆ é™¤å›å¤"><img alt="" src="asset/image/icon_delreply.gif" />[åˆ é™¤å›å¤]</a> <% end if %>
 	</div>
 	<%
 	rs.MoveNext
 	wend
 	%>
 
-	<input type="submit" name="multi_passaudit" value="Í¨¹ıÉóºËÑ¡¶¨ÁôÑÔ" class="admin-multi-submit" onclick="return confirm('È·ÊµÒªÍ¨¹ıÉóºËÑ¡¶¨ÁôÑÔÂğ£¿');"/>
-	<input type="submit" name="multi_del" value="É¾³ıÑ¡¶¨ÁôÑÔ" class="admin-multi-submit" onclick="return confirm('È·ÊµÒªÉ¾³ıÑ¡¶¨ÁôÑÔÂğ£¿');"/>
+	<input type="submit" name="multi_passaudit" value="é€šè¿‡å®¡æ ¸é€‰å®šç•™è¨€" class="admin-multi-submit" onclick="return confirm('ç¡®å®è¦é€šè¿‡å®¡æ ¸é€‰å®šç•™è¨€å—ï¼Ÿ');"/>
+	<input type="submit" name="multi_del" value="åˆ é™¤é€‰å®šç•™è¨€" class="admin-multi-submit" onclick="return confirm('ç¡®å®è¦åˆ é™¤é€‰å®šç•™è¨€å—ï¼Ÿ');"/>
 </form>
 
 <!-- #include file="include/template/page_number.inc" -->

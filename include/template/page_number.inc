@@ -1,5 +1,5 @@
 <div class="topic">
-	<h3 class="title">[ม๔ัิทึาณ]</h3>
+	<h3 class="title">[็•่จ€ๅ้กต]</h3>
 	<div class="content">
 	<%
 	Dim j

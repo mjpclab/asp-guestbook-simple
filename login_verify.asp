@@ -7,7 +7,7 @@
 response.expires=-1
 if VCodeCount>0 and (Request.Form("ivcode")<>session("vcode") or session("vcode")="") then
 	session("vcode")=""
-	Call ErrorPage("ÑéÖ¤Âë´íÎó¡£","admin_login.asp")
+	Call ErrorPage("éªŒè¯ç é”™è¯¯ã€‚","admin_login.asp")
 	Response.End
 else
 	session("vcode")=""
@@ -26,11 +26,11 @@ if Not rs.EOF then
 		session.Timeout=clng(AdminTimeOut)
 		Response.Redirect "admin.asp"
 	else
-		Call ErrorPage("ÃÜÂë´íÎó¡£","admin_login.asp")
+		Call ErrorPage("å¯†ç é”™è¯¯ã€‚","admin_login.asp")
 		Response.End
 	end if
 else
-	Call ErrorPage("ÃÜÂë´íÎó¡£","admin_login.asp")
+	Call ErrorPage("å¯†ç é”™è¯¯ã€‚","admin_login.asp")
 	Response.End
 end if
 

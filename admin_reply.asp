@@ -16,14 +16,14 @@ end if
 <html>
 <head>
 	<!-- #include file="include/template/metatag.inc" -->
-	<title><%=HomeName%> ÁôÑÔ±¾ »Ø¸´ÁôÑÔ</title>
+	<title><%=HomeName%> ç•™è¨€æœ¬ å›žå¤ç•™è¨€</title>
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 	<!-- #include file="asset/css/style.asp" -->
 
 	<script type="text/javascript">
 		function submitcheck(cobject)
 		{
-			if (cobject.rcontent.value==='') {alert('ÇëÊäÈë»Ø¸´ÄÚÈÝ£¡'); cobject.rcontent.focus(); return false;}
+			if (cobject.rcontent.value==='') {alert('è¯·è¾“å…¥å›žå¤å†…å®¹ï¼'); cobject.rcontent.focus(); return false;}
 			return (true);
 		}
 		function sfocus()
@@ -54,7 +54,7 @@ end if
 %>
 
 <div class="topic reply">
-	<h2 class="title">»Ø¸´ÁôÑÔ</h2>
+	<h2 class="title">å›žå¤ç•™è¨€</h2>
 	<form class="content" method="post" action="admin_savereply.asp" onsubmit="return submitcheck(this)" name="form3">
 		<div class="field">
 			<span class="value">
@@ -64,7 +64,7 @@ end if
 		<div class="command">
 			<input type="hidden" name="page" id="page" value="<%=Server.HTMLEncode(Request.QueryString("page"))%>" />
 			<input type="hidden" name="mainid" id="mainid" value="<%=Server.HTMLEncode(Request.QueryString("id"))%>" />
-			<input type="submit" value="·¢±í»Ø¸´" />
+			<input type="submit" value="å‘è¡¨å›žå¤" />
 		</div>
 	</form>
 </div>

@@ -5,14 +5,14 @@
 <%
 Response.Expires=-1
 if Request.Form("iname")="" then
-	Call ErrorPage("ĞÕÃû²»ÄÜÎª¿Õ¡£","index.asp")
+	Call ErrorPage("å§“åä¸èƒ½ä¸ºç©ºã€‚","index.asp")
 	Response.End
 elseif Request.Form("ititle")="" then
-	Call ErrorPage("±êÌâ²»ÄÜÎª¿Õ¡£","index.asp")
+	Call ErrorPage("æ ‡é¢˜ä¸èƒ½ä¸ºç©ºã€‚","index.asp")
 	Response.End
 elseif VCodeCount>0 and (Request.Form("ivcode")<>session("vcode") or session("vcode")="") then
 	session("vcode")=""
-	Call ErrorPage("ÑéÖ¤Âë´íÎó¡£","index.asp")
+	Call ErrorPage("éªŒè¯ç é”™è¯¯ã€‚","index.asp")
 	Response.End
 else
 	session("vcode")=""

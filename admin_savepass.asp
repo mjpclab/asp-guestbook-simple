@@ -23,10 +23,10 @@ if Not rs.EOF then
 		rs.Close:cn.Close : set rs=nothing : set cn=nothing
 		response.Redirect "admin.asp"
 	else
-		Call ErrorPage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
+		Call ErrorPage("å¯†ç é”™è¯¯ã€‚","admin_chpass.asp")
 	end if
 else
-	Call ErrorPage("ÃÜÂë´íÎó¡£","admin_chpass.asp")
+	Call ErrorPage("å¯†ç é”™è¯¯ã€‚","admin_chpass.asp")
 end if
 
 rs.Close

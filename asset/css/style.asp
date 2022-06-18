@@ -1,20 +1,20 @@
 <%
-Const TableWidth=500		'±í¸ñ¿í¶È
+Const TableWidth=500		'è¡¨æ ¼å®½åº¦
 
-Const PageBackColor="#FFFFFF"		'±³¾°É«
-Const PageBackImage="asset/image/bg.jpg"			'±³¾°Í¼Æ¬£¬Ê¹ÓÃÏà¶ÔÂ·¾¶
-Const TableBorderColor="#80A8FF"		'±í¸ñ±ß¿òÑÕÉ«
-Const TableTitleBGC="#d1e0ff"			'±í¸ñ£­ÎÄÕÂ±êÌâ±³¾°É«
-Const TableTitleColor="#000000"		'±í¸ñ£­ÎÄÕÂ±êÌâÑÕÉ«
-Const TableContentBGC="#EEEEEE"			'±í¸ñ£­ÎÄÕÂÄÚÈÝ±³¾°É«
-Const TableContentColor="#000000"		'±í¸ñ£­ÎÄÕÂÄÚÈÝÑÕÉ«
-Const TableInfoBGC="#d6deec"			'±í¸ñ£­×÷ÕßÐÅÏ¢±³¾°É«
-Const TableInfoColor="#000000"		'±í¸ñ£­×÷ÕßÐÅÏ¢ÑÕÉ«
+Const PageBackColor="#FFFFFF"		'èƒŒæ™¯è‰²
+Const PageBackImage="asset/image/bg.jpg"			'èƒŒæ™¯å›¾ç‰‡ï¼Œä½¿ç”¨ç›¸å¯¹è·¯å¾„
+Const TableBorderColor="#80A8FF"		'è¡¨æ ¼è¾¹æ¡†é¢œè‰²
+Const TableTitleBGC="#d1e0ff"			'è¡¨æ ¼ï¼æ–‡ç« æ ‡é¢˜èƒŒæ™¯è‰²
+Const TableTitleColor="#000000"		'è¡¨æ ¼ï¼æ–‡ç« æ ‡é¢˜é¢œè‰²
+Const TableContentBGC="#EEEEEE"			'è¡¨æ ¼ï¼æ–‡ç« å†…å®¹èƒŒæ™¯è‰²
+Const TableContentColor="#000000"		'è¡¨æ ¼ï¼æ–‡ç« å†…å®¹é¢œè‰²
+Const TableInfoBGC="#d6deec"			'è¡¨æ ¼ï¼ä½œè€…ä¿¡æ¯èƒŒæ™¯è‰²
+Const TableInfoColor="#000000"		'è¡¨æ ¼ï¼ä½œè€…ä¿¡æ¯é¢œè‰²
 
-Const LinkNormal="#000000"		'³¬Á´½Ó£­Õý³£ÑÕÉ«
-Const LinkVisited="#000000"		'³¬Á´½Ó£­ÒÑ·ÃÎÊÑÕÉ«
-Const LinkActive="#000000"		'³¬Á´½Ó£­»î¶¯ÑÕÉ«
-Const LinkHover="#000000"			'³¬Á´½Ó£­Êó±êÐüÍ£ÑÕÉ«
+Const LinkNormal="#000000"		'è¶…é“¾æŽ¥ï¼æ­£å¸¸é¢œè‰²
+Const LinkVisited="#000000"		'è¶…é“¾æŽ¥ï¼å·²è®¿é—®é¢œè‰²
+Const LinkActive="#000000"		'è¶…é“¾æŽ¥ï¼æ´»åŠ¨é¢œè‰²
+Const LinkHover="#000000"			'è¶…é“¾æŽ¥ï¼é¼ æ ‡æ‚¬åœé¢œè‰²
 %>
 
 <style type="text/css">

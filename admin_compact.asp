@@ -34,5 +34,5 @@ End If
 Set fso = nothing
 Set Engine = nothing
 
-Call MessagePage("Êý¾Ý¿âÑ¹ËõÍê³É¡£","admin.asp")
+Call MessagePage("æ•°æ®åº“åŽ‹ç¼©å®Œæˆã€‚","admin.asp")
 %>

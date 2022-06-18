@@ -4,9 +4,9 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 <script type="text/javascript">
 	function submitcheck(frm)
 	{
-		if (!frm.iname.value) {alert("ÇëÊäÈëĞÕÃû¡£"); frm.iname.focus(); return false;}
-		if (!frm.ititle.value) {alert("ÇëÊäÈë±êÌâ¡£"); frm.ititle.focus(); return false;}
-		if (!frm.ivcode.value) {alert("ÇëÊäÈëÑéÖ¤Âë¡£"); frm.ivcode.focus(); return false;}
+		if (!frm.iname.value) {alert("è¯·è¾“å…¥å§“åã€‚"); frm.iname.focus(); return false;}
+		if (!frm.ititle.value) {alert("è¯·è¾“å…¥æ ‡é¢˜ã€‚"); frm.ititle.focus(); return false;}
+		if (!frm.ivcode.value) {alert("è¯·è¾“å…¥éªŒè¯ç ã€‚"); frm.ivcode.focus(); return false;}
 		return true;
 	}
 </script>
@@ -17,23 +17,23 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 	if HomeLogo<>"" then Response.Write "<img src=""" &HomeLogo& """ alt=""" & HomeName & """ />"
 	if HomeName<>"" then
 		if HomeAddr<>"" then
-			Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &raquo; ÁôÑÔ±¾"
+			Response.Write "<a href=""" &HomeAddr& """>" &HomeName& "</a> &raquo; ç•™è¨€æœ¬"
 		else
-			Response.Write HomeName& " &raquo; ÁôÑÔ±¾"
+			Response.Write HomeName& " &raquo; ç•™è¨€æœ¬"
 		end if
 	end if
 	%>
 	</h1>
-	<span><a href="admin.asp">¹ÜÀí</a></span>
+	<span><a href="admin.asp">ç®¡ç†</a></span>
 </div>
 
 <div class="topic write-words">
-	<h2 class="title">»¶Ó­ÄúÁôÑÔ£¡</h2>
+	<h2 class="title">æ¬¢è¿æ‚¨ç•™è¨€ï¼</h2>
 	<form class="content" method="post" action="write.asp" onsubmit="return submitcheck(this);" name="form1">
 		<div class="contact">
 			<div class="field">
 				<span class="label">
-					<img src="asset/image/icon_name.gif" /><span class="text">ĞÕÃû</span><span class="required">*</span>
+					<img src="asset/image/icon_name.gif" /><span class="text">å§“å</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="iname" maxlength="64" />
@@ -41,7 +41,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="asset/image/icon_mail.gif" /><span class="text">ÓÊ¼ş</span>
+					<img src="asset/image/icon_mail.gif" /><span class="text">é‚®ä»¶</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="imail" maxlength="48" />
@@ -49,7 +49,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="asset/image/icon_qq.gif" /><span class="text">QQºÅ</span>
+					<img src="asset/image/icon_qq.gif" /><span class="text">QQå·</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="iqq" maxlength="16" />
@@ -57,7 +57,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="asset/image/icon_homepage.gif" /><span class="text">Ö÷Ò³</span>
+					<img src="asset/image/icon_homepage.gif" /><span class="text">ä¸»é¡µ</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="ihomepage" maxlength="192" />
@@ -67,7 +67,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 		<div class="article">
 			<div class="field">
 				<span class="label">
-					<span class="text">ÑéÖ¤</span><span class="required">*</span>
+					<span class="text">éªŒè¯</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text" type="text" name="ivcode" autocomplete="off" /><img class="captcha" src="show_vcode.asp" />
@@ -75,7 +75,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<span class="text">±êÌâ</span><span class="required">*</span>
+					<span class="text">æ ‡é¢˜</span><span class="required">*</span>
 				</span>
 				<span class="value">
 					<input class="text ititle" type="text" name="ititle" maxlength="64" />
@@ -83,7 +83,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 			<div class="field">
 				<span class="label">
-					<span class="text">ÄÚÈİ</span>
+					<span class="text">å†…å®¹</span>
 				</span>
 				<span class="value">
 					<textarea class="textarea" name="icontent"></textarea>
@@ -91,7 +91,7 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 			</div>
 		</div>
 		<div class="command">
-			<input type="submit" value="·¢±íÁôÑÔ" />
+			<input type="submit" value="å‘è¡¨ç•™è¨€" />
 		</div>
 	</form>
 </div>

@@ -9,7 +9,7 @@ sub MessagePage(message,backPage)
 	<html>
 	<head>
 		<!-- #include file="include/template/metatag.inc" -->
-		<title><%=HomeName%> ÁôÑÔ±¾</title>
+		<title><%=HomeName%> ç•™è¨€æœ¬</title>
 		<link rel="stylesheet" type="text/css" href="asset/css/style.css"/>
 		<!-- #include file="asset/css/style.asp" -->
 		<script type="text/javascript">
@@ -21,7 +21,7 @@ sub MessagePage(message,backPage)
 	</head>
 	<body class="message-page">
 		<p><%=message%></p>
-		<p><a href="<%=backPage%>">[·µ»Ø]</a></p>
+		<p><a href="<%=backPage%>">[è¿”å›]</a></p>
 	</body>
 	</html>
 	<%

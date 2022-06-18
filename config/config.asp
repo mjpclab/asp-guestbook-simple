@@ -1,30 +1,30 @@
 <%
-Const dbfile = "database/data.mdb.db"		'Êý¾Ý¿âÎÄ¼þÎ»ÖÃ£¬Ê¹ÓÃÏà¶ÔÂ·¾¶£¬Çë×ÔÐÐ¸ü¸Ä
-Const dbfilepassword = ""					'Êý¾Ý¿âÎÄ¼þÃÜÂë
-Const HomeLogo = ""				'ÍøÕ¾LogoµØÖ·
-Const HomeName = "MyHomePage"			'ÍøÕ¾Ãû³Æ
-Const HomeAddr = "http://mjpclab.net/"	'ÍøÕ¾µØÖ·
+Const dbfile = "database/data.mdb.db"		'æ•°æ®åº“æ–‡ä»¶ä½ç½®ï¼Œä½¿ç”¨ç›¸å¯¹è·¯å¾„ï¼Œè¯·è‡ªè¡Œæ›´æ”¹
+Const dbfilepassword = ""					'æ•°æ®åº“æ–‡ä»¶å¯†ç 
+Const HomeLogo = ""				'ç½‘ç«™Logoåœ°å€
+Const HomeName = "MyHomePage"			'ç½‘ç«™åç§°
+Const HomeAddr = "http://mjpclab.net/"	'ç½‘ç«™åœ°å€
 
-Const VCodeCount = 4			'ÑéÖ¤Âë³¤¶È
-Const NeedAudit = False			'ÁôÑÔÊÇ·ñÐèÒªÉóºË True:ÊÇ False:·ñ
+Const VCodeCount = 4			'éªŒè¯ç é•¿åº¦
+Const NeedAudit = False			'ç•™è¨€æ˜¯å¦éœ€è¦å®¡æ ¸ True:æ˜¯ False:å¦
 
-Const HTMLSupport = False			'·Ã¿ÍÁôÑÔÊÇ·ñÖ§³ÖHTML True:ÊÇ False:·ñ
-Const AdminHTMLSupport = True		'¹ÜÀíÔ±»Ø¸´ÊÇ·ñÖ§³ÖHTML
+Const HTMLSupport = False			'è®¿å®¢ç•™è¨€æ˜¯å¦æ”¯æŒHTML True:æ˜¯ False:å¦
+Const AdminHTMLSupport = True		'ç®¡ç†å‘˜å›žå¤æ˜¯å¦æ”¯æŒHTML
 
-Const UBBSupport = True		'·Ã¿ÍÁôÑÔÊÇ·ñÖ§³ÖUBB
-Const UbbFlag_image = False		'·Ã¿ÍUBBÍ¼Æ¬È¨ÏÞ
-Const UbbFlag_url = False		'·Ã¿ÍUBB URL¡¢EmailÈ¨ÏÞ
-Const UbbFlag_autourl = True		'·Ã¿ÍUBB×Ô¶¯Ê¶±ðÍøÖ·È¨ÏÞ
-Const UbbFlag_player = False		'·Ã¿ÍUBB²¥·Å¿Ø¼þÈ¨ÏÞ
-Const UbbFlag_paragraph = True		'·Ã¿ÍUBB¶ÎÂäÑùÊ½È¨ÏÞ
-Const UbbFlag_fontstyle = True		'·Ã¿ÍUBB×ÖÌåÑùÊ½È¨ÏÞ
-Const UbbFlag_fontcolor = True		'·Ã¿ÍUBB×ÖÌåÑÕÉ«È¨ÏÞ
-Const UbbFlag_alignment = True		'·Ã¿ÍUBB¶ÔÆë·½Ê½È¨ÏÞ
-Const UbbFlag_markdown_paragraph = True		'·Ã¿ÍUBB Markdown¶ÎÂäÑùÊ½È¨ÏÞ
-Const UbbFlag_markdown_fontstyle = True		'·Ã¿ÍUBB Markdown×ÖÌåÑùÊ½È¨ÏÞ
-Const AdminUBBSupport = True		'¹ÜÀíÔ±»Ø¸´ÊÇ·ñÖ§³ÖUBB
+Const UBBSupport = True		'è®¿å®¢ç•™è¨€æ˜¯å¦æ”¯æŒUBB
+Const UbbFlag_image = False		'è®¿å®¢UBBå›¾ç‰‡æƒé™
+Const UbbFlag_url = False		'è®¿å®¢UBB URLã€Emailæƒé™
+Const UbbFlag_autourl = True		'è®¿å®¢UBBè‡ªåŠ¨è¯†åˆ«ç½‘å€æƒé™
+Const UbbFlag_player = False		'è®¿å®¢UBBæ’­æ”¾æŽ§ä»¶æƒé™
+Const UbbFlag_paragraph = True		'è®¿å®¢UBBæ®µè½æ ·å¼æƒé™
+Const UbbFlag_fontstyle = True		'è®¿å®¢UBBå­—ä½“æ ·å¼æƒé™
+Const UbbFlag_fontcolor = True		'è®¿å®¢UBBå­—ä½“é¢œè‰²æƒé™
+Const UbbFlag_alignment = True		'è®¿å®¢UBBå¯¹é½æ–¹å¼æƒé™
+Const UbbFlag_markdown_paragraph = True		'è®¿å®¢UBB Markdownæ®µè½æ ·å¼æƒé™
+Const UbbFlag_markdown_fontstyle = True		'è®¿å®¢UBB Markdownå­—ä½“æ ·å¼æƒé™
+Const AdminUBBSupport = True		'ç®¡ç†å‘˜å›žå¤æ˜¯å¦æ”¯æŒUBB
 
-Const AdminTimeOut = 20		'¹ÜÀíÔ±µÇÂ¼³¬Ê±(·Ö)
+Const AdminTimeOut = 20		'ç®¡ç†å‘˜ç™»å½•è¶…æ—¶(åˆ†)
 
-Const ItemsPerPage = 5		'Ã¿Ò³ÏÔÊ¾µÄÁôÑÔÊý
+Const ItemsPerPage = 5		'æ¯é¡µæ˜¾ç¤ºçš„ç•™è¨€æ•°
 %>
