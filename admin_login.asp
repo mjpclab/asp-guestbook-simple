@@ -4,7 +4,7 @@
 <%if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)%>
 
 <!-- #include file="include/template/dtd.inc" -->
-<html>
+<html lang="zh-CN">
 <head>
 	<!-- #include file="include/template/metatag.inc" -->
 	<title><%=HomeName%> 留言本 管理登录</title>
