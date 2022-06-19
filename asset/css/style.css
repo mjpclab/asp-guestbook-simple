@@ -136,6 +136,7 @@ form .command {
 	line-height: 25px;
 	border-bottom: 1px solid;
 	white-space: nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
@@ -220,7 +221,6 @@ form .command {
 
 .write-words .contact {
 	float: left;
-	margin-bottom: 20px;
 }
 
 .write-words .contact .label {
@@ -232,9 +232,7 @@ form .command {
 }
 
 .write-words .article {
-	float: left;
-	margin-left: 30px;
-	margin-bottom: 20px;
+	float: right;
 }
 
 .write-words .article .label {

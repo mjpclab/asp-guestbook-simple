@@ -29,8 +29,10 @@ get_divided_page cn,rs,"SELECT COUNT(id) FROM main","SELECT main.*,reply.reinfo 
 %>
 
 <form method="post" action="admin_multi_process.asp">
-	<input type="submit" name="multi_passaudit" value="通过审核选定留言" class="admin-multi-submit" onclick="return confirm('确实要通过审核选定留言吗？');"/>
-	<input type="submit" name="multi_del" value="删除选定留言" class="admin-multi-submit" onclick="return confirm('确实要删除选定留言吗？');"/>
+	<div>
+		<input type="submit" name="multi_passaudit" value="通过审核选定留言" class="admin-multi-submit" onclick="return confirm('确实要通过审核选定留言吗？');"/>
+		<input type="submit" name="multi_del" value="删除选定留言" class="admin-multi-submit" onclick="return confirm('确实要删除选定留言吗？');"/>
+	</div>
 	<%while Not rs.EOF%>
 	<!-- #include file="include/template/message_admin.inc" -->
 	<div class="admin-tools">
