@@ -33,9 +33,13 @@ if rs.Fields("auditting") then %>
 			<div class="words"><%=article%></div>
 			<div class="icons">
 			<%
-			if rs.Fields("email")<>"" then Response.Write "<a href=""mailto:" &rs.Fields("email")& """ title=""作者邮箱：" &rs.Fields("email")& """><img src=""asset/image/icon_mail.gif"" alt="""" style=""border:0px;"" /></a>"
-			if rs.Fields("qqid")<>"" then Response.Write "<span title=""作者QQ：" &rs.Fields("qqid")& """><img src=""asset/image/icon_qq.gif"" alt=""作者QQ：" &rs.Fields("qqid")& """ style=""border:0px;"" /></span>"
-			if rs.Fields("homepage")<>"" then Response.Write "<a href=""" &rs.Fields("homepage")& """ target=""_blank"" title=""作者主页：" &rs.Fields("homepage")& """><img src=""asset/image/icon_homepage.gif"" alt="""" style=""border:0px;"" /></a>"
+			dim email, qqid, wechatid
+			email=rs.Fields("email")
+			qqid=rs.Fields("qqid")
+			wechatid=rs.Fields("wechatid")
+			if email<>"" then Response.Write "<a href=""mailto:" &email& """ title=""邮箱：" &email& """><img src=""asset/image/icon_mail.gif"" alt=""邮箱"" /></a>"
+			if qqid<>"" then Response.Write "<a href=""tencent://message/?uin=" &qqid& """ title=""QQ：" &qqid& """><img src=""asset/image/icon_qq.gif"" alt=""QQ" &qqid& """ /></a>"
+			if wechatid<>"" then Response.Write "<span title=""微信：" &wechatid& """><img src=""asset/image/icon_wechat.gif"" alt=""微信" &wechatid& """ /></span>"
 			%>
 			</div>
 			<%if reinfo<>"" then%>

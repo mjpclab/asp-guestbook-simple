@@ -52,15 +52,15 @@ if VCodeCount>0 then session("vcode")=getvcode(VCodeCount)
 					<img src="asset/image/icon_qq.gif" /><span class="text">QQ号</span>
 				</span>
 				<span class="value">
-					<input class="text" type="text" name="iqq" maxlength="16" />
+					<input class="text" type="text" name="iqq" maxlength="24" />
 				</span>
 			</div>
 			<div class="field">
 				<span class="label">
-					<img src="asset/image/icon_homepage.gif" /><span class="text">主页</span>
+					<img src="asset/image/icon_wechat.gif" /><span class="text">微信</span>
 				</span>
 				<span class="value">
-					<input class="text" type="text" name="ihomepage" maxlength="192" />
+					<input class="text" type="text" name="iwechat" maxlength="24" />
 				</span>
 			</div>
 		</div>

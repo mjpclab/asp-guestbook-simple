@@ -23,7 +23,7 @@ set cn=server.CreateObject("ADODB.Connection")
 set rs=server.CreateObject("ADODB.Recordset")
 
 CreateConn cn
-dim content1,name1,title1,email1,qqid1,homepage1
+dim content1,name1,title1,email1,qqid1,wechatid1
 '----------------------------------
 name1=server.HTMLEncode(Request.Form("iname"))
 
@@ -35,11 +35,9 @@ email1=replace(replace(email1," ",""),"script:","script",1,-1,1)
 qqid1=server.HTMLEncode(Request.Form("iqq"))
 qqid1=replace(qqid1," ","")
 
-homepage1=server.HTMLEncode(Request.Form("ihomepage"))
-homepage1=replace(homepage1,"script:","script",1,-1,1)
-if homepage1<>"" then
-	if InStr(homepage1,"//")=0 then homepage1="http://" & homepage1
-end if
+wechatid1=server.HTMLEncode(Request.Form("iwechat"))
+wechatid1=replace(wechatid1," ","")
+
 content1=replace(Request.Form("icontent"),"<%","< %")
 '-------------------------------------
 rs.Open "SELECT TOP 1 * FROM main WHERE id IS NULL",cn,0,3,1
@@ -48,8 +46,8 @@ rs.Fields("name")=name1
 rs.Fields("title")=title1
 rs.Fields("email")=email1
 rs.Fields("qqid")=qqid1
-rs.Fields("homepage")=homepage1
-rs.Fields("logdate")=cstr(now())
+rs.Fields("wechatid")=wechatid1
+rs.Fields("logdate")=now()
 rs.Fields("article")=content1
 rs.Fields("auditting")=NeedAudit
 rs.Update
